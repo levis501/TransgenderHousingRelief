@@ -5,6 +5,7 @@
 ## Plan
 
 [Project Specifications](https://docs.google.com/document/d/1zsxILMFHKN7sZAug3qIxRt-fNpGrYzKyp1UQJWHWNv4/edit?usp=sharing)
+[Page Layout Designs](https://docs.google.com/document/d/1MelRd4xCZ8p825LSN8FhGLW2B1CiLUXY0zu9jhhfJrI/edit?usp=sharing)
 
 ### Tech Stack
 
