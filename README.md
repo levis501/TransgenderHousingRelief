@@ -12,7 +12,7 @@ The frontend will use [React](https://reactjs.org/). The backend will use [Node]
 
 ## Contributing
 
-Pull the repository, then when you want to submit a contribution, create a pull request for your changes.
+Fork the repository, claim an issue, and when you're ready to submit a contribution, create a pull request for your changes to be code reviewed.
 
 ## Communication
 
