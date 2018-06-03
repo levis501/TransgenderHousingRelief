@@ -14,6 +14,10 @@ The frontend will use [React](https://reactjs.org/). The backend will use [Node]
 
 Fork the repository, claim an issue, and when you're ready to submit a contribution, create a pull request for your changes to be code reviewed.
 
+### Running the Client
+
+After cloning the project, run `yarn install` to install the local node modules, and `yarn start` to run the client.
+
 ## Communication
 
 Join the [Discord](https://discord.gg/cqKwmjE). Public read-only access, but in order to post, please briefly introduce yourself in the #introductions channel. This is done merely to prevent abuse.
