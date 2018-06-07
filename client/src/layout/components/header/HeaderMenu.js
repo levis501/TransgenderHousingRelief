@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Menu, Segment } from 'semantic-ui-react';
+import { withRouter, Link } from 'react-router-dom';
 
-class HeaderMenu extends Component {
-  state = { activeItem: 'home' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  render() {
-    const { activeItem } = this.state;
-
-    return (
-      <Menu pointing secondary>
-        <Menu.Item name='Find Housing' active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name='Offer Housing' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-        <Menu.Item name='Legal Resources' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-      </Menu>
-    )
-  }
+const HeaderMenu = (props) => {
+  const { path } = props.match;
+  return (
+    <Menu pointing secondary>
+      <Menu.Item as={Link} to='/search' name='Find Housing' active={path === '/search'} />
+      <Menu.Item as={Link} to='/offer-housing' name='Offer Housing' active={path === '/offer-housing'} />
+      <Menu.Item as={Link} to='/legal' name='Legal Resources' active={path === '/legal'} />
+    </Menu>
+  )
 }
 
-export default HeaderMenu;
+export default withRouter(HeaderMenu);

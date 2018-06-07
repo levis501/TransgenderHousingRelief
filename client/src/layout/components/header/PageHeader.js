@@ -8,14 +8,18 @@ import {
   Container
 } from 'semantic-ui-react';
 
+import { Link } from 'react-router-dom';
+
 import HeaderMenu from './HeaderMenu';
 import UserControl from '../../../components/user/UserControl';
 import HeaderLogoSrc from '../../../resources/img/logo_full.png';
 
 const HeaderLogo = () => (
-  <Image src={HeaderLogoSrc}
-    size='medium'
-    />
+  <Link to='/'>
+    <Image src={HeaderLogoSrc}
+      size='medium'
+      />
+  </Link>
 );
 
 class PageHeader extends Component {
