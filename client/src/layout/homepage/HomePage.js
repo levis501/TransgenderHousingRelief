@@ -7,18 +7,13 @@ import {
   Grid,
   Header
 } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import PageLayout from '../components/PageLayout';
 
 const SegmentStyle = {
   margin: '1em 0em'
 }
-
-const HomePageMission = () => (
-  <Container text>
-
-  </Container>
-)
 
 const MissionStatement = () => (
   <Segment vertical textAlign='center' style={SegmentStyle}>
@@ -36,7 +31,7 @@ const Actions = () => (
         <Grid.Column width={8}>
           <Header as='h2'>Find Housing</Header>
           <p>asfo jaosif aoiem aiofefiuaneiuf</p>
-          <Button size='large'>
+          <Button as={Link} to='/search' size='large'>
             Get Started
             <Icon name='right arrow' />
           </Button>
@@ -44,7 +39,7 @@ const Actions = () => (
         <Grid.Column width={8}>
           <Header as='h2'>Offer Housing</Header>
           <p>asfo jaosif aoiem aiofefiuaneiuf</p>
-          <Button size='large'>
+          <Button as={Link} to='/offer-housing' size='large'>
             Get Started
             <Icon name='right arrow' />
           </Button>
