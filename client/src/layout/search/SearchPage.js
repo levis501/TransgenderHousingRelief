@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
-  Container
+  Container,
+  Header
 } from 'semantic-ui-react';
 
 import PageLayout from '../components/PageLayout';
@@ -12,6 +13,7 @@ class SearchPage extends Component {
     return (
       <PageLayout>
         <Container>
+          <Header as='h1'>Find Housing</Header>
           <Search />
           <SearchResults />
         </Container>
