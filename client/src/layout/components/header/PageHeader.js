@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Grid,
-  Header,
-  Menu,
   Image,
-  Segment,
   Container
 } from 'semantic-ui-react';
 
@@ -22,24 +19,20 @@ const HeaderLogo = () => (
   </Link>
 );
 
-class PageHeader extends Component {
-  render() {
-    return (
-      <Container style={{marginTop: '1em'}}>
-        <Grid>
-          <Grid.Row>
-            <Grid.Column width={6}>
-              <HeaderLogo />
-            </Grid.Column>
-            <Grid.Column width={6} floated='right'>
-              <UserControl />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-        <HeaderMenu />
-      </Container>
-    )
-  }
-}
+const PageHeader = () => (
+  <Container style={{marginTop: '1em', marginBottom: '1em'}}>
+    <Grid>
+      <Grid.Row>
+        <Grid.Column width={6}>
+          <HeaderLogo />
+        </Grid.Column>
+        <Grid.Column width={6} floated='right'>
+          <UserControl />
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+    <HeaderMenu />
+  </Container>
+);
 
 export default PageHeader;
