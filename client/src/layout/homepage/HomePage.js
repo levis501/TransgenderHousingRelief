@@ -31,13 +31,13 @@ const Actions = () => (
         <Grid.Column width={8}>
           <Header as='h2'>Search Offered</Header>
           <p>asfo jaosif aoiem aiofefiuaneiuf</p>
-          <Button as={Link} to='/search' size='large'>
+          <Button as={Link} to='/search-offered' size='large'>
             Get Started
             <Icon name='right arrow' />
           </Button>
         </Grid.Column>
         <Grid.Column width={8}>
-          <Header as='h2'>Offer Housing</Header>
+          <Header as='h2'>Search Wanted</Header>
           <p>asfo jaosif aoiem aiofefiuaneiuf</p>
           <Button as={Link} to='/offer-housing' size='large'>
             Get Started

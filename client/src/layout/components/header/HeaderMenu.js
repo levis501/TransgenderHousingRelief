@@ -7,8 +7,8 @@ const HeaderMenu = (props) => {
   return (
     <Menu pointing secondary>
       <Menu.Item as={Link} to='/' name='Home' active={path === '/'} />
-      <Menu.Item as={Link} to='/search' name='Search Offered' active={path === '/search'} />
-      <Menu.Item as={Link} to='/offer-housing' name='Offer Housing' active={path === '/offer-housing'} />
+      <Menu.Item as={Link} to='/search-offered' name='Search Offered' active={path === '/search-offered'} />
+      <Menu.Item as={Link} to='/search-wanted' name='Search Wanted' active={path === '/offer-housing'} />
       <Menu.Item as={Link} to='/submit' name='Submit Ad' active={path === '/submit'} />
       <Menu.Item as={Link} to='/safety-tips' name='Safety Tips' active={path === '/safety-tips'} />
       <Menu.Item as={Link} to='/housing-resources' name='Housing Resources' active={path === '/housing-resources'} />

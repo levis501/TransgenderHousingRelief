@@ -10,7 +10,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/search' component={SearchPage}/>
+          <Route path='/search-offered' component={SearchPage}/>
         </Switch>
       </Router>
     );
