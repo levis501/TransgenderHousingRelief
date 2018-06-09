@@ -29,7 +29,7 @@ const Actions = () => (
     <Grid stackable>
       <Grid.Row>
         <Grid.Column width={8}>
-          <Header as='h2'>Find Housing</Header>
+          <Header as='h2'>Search Offered</Header>
           <p>asfo jaosif aoiem aiofefiuaneiuf</p>
           <Button as={Link} to='/search' size='large'>
             Get Started
