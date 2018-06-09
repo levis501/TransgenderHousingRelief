@@ -18,7 +18,7 @@ Fork the repository, claim an issue, and when you're ready to submit a contribut
 
 ### Running the Project
 
-After cloning the project, run `yarn install` to install the local node modules, and `yarn start` to run the client.
+After cloning the project, open a command line in the client or server directory. Run `yarn install` to install the local node modules, and `yarn start` to run the client.
 
 ## Communication
 
