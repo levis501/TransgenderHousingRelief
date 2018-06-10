@@ -13,7 +13,7 @@ class SearchPage extends Component {
     return (
       <PageLayout>
         <Container>
-          <Header as='h1'>Find Housing</Header>
+          <Header as='h1'>Search Offered</Header>
           <Search />
           <SearchResults />
         </Container>

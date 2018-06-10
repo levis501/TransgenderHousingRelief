@@ -1,6 +1,6 @@
 export const tags = [
   { name: 'Emergency', type: 'Housing', color:'pink'},
-  { name: 'Sublet', type: 'Housing', color:'pink'},
+  { name: 'Temporary', type: 'Housing', color:'pink'},
   { name: 'Long Term', type: 'Housing', color:'pink'},
   { name: 'Pet-free', type: 'Accessability', color:'blue'},
   { name: 'Wheelchair', type: 'Accessability', color:'blue'},
@@ -14,5 +14,4 @@ export const tags = [
   { name: 'Queer', type: 'Community', color:'teal'},
   { name: 'Deaf', type: 'Community', color:'teal'},
   { name: 'Blind', type: 'Community', color:'teal'},
-  { name: 'Kink', type: 'Community', color:'teal'},
 ];
