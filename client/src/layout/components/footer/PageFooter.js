@@ -19,22 +19,23 @@ const PageFooter = () => (
         <Grid.Row>
           <Grid.Column width={4}>
             <Header inverted>
-              Uhm
+              Help
             </Header>
             <List link inverted>
-              <List.Item as='a'>Errm</List.Item>
-              <List.Item as='a'>Uhh</List.Item>
-              <List.Item as='a'>Ahem.</List.Item>
+              <List.Item as='a'>FAQ</List.Item>
+              <List.Item as='a'>Contact Us</List.Item>
+              <List.Item as='a'>Feedback</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={12}>
             <Header inverted>
-              Uhm
+              Legal
             </Header>
             <List link inverted>
-              <List.Item as='a'>Errm</List.Item>
-              <List.Item as='a'>Uhh</List.Item>
-              <List.Item as='a'>Ahem.</List.Item>
+              <List.Item as='a'>Terms & Conditions</List.Item>
+              <List.Item as='a'>Disclaimer</List.Item>
+              <List.Item as='a'>Privacy Policy</List.Item>
+              <List.Item as='a'>Corporate Sponsors</List.Item>
             </List>
           </Grid.Column>
         </Grid.Row>

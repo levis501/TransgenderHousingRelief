@@ -23,8 +23,8 @@ class DateRangeSelect extends Component {
   render() {
     return (
       <React.Fragment>
-        <Form.Input label='Date' width={8} labelPosition='left'>
-          <Label>From</Label>
+        <Form.Input label='Start Date' width={8} labelPosition='left'>
+          <Label>Soonest</Label>
           <DateInput
             icon='calendar alternate outline'
             dateFormat='MM-DD-YYYY'
@@ -34,7 +34,7 @@ class DateRangeSelect extends Component {
             />
         </Form.Input>
         <Form.Input label='&nbsp;' width={8} labelPosition='left'>
-          <Label>To</Label>
+          <Label>Latest</Label>
           <DateInput
             icon='calendar alternate outline'
             dateFormat='MM-DD-YYYY'
