@@ -3,3 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.ui.label {
+  margin: 0.1em;
+}
