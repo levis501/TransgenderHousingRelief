@@ -1,7 +1,9 @@
 import React from 'react';
-import { Grid, Item, Label, Pagination, Icon } from 'semantic-ui-react';
+import { Grid, Item, Label, Pagination, Header, Icon } from 'semantic-ui-react';
 
-const SearchResult = ({title, city, state, dateFrom, dateTo, description, price, tags}) => (
+import SortBy from './SortBy';
+
+const SearchResult = ({title, city, state, startDate, description, price, tags}) => (
   <Item>
     <Item.Content>
       <Item.Header as='a'>
@@ -13,7 +15,7 @@ const SearchResult = ({title, city, state, dateFrom, dateTo, description, price,
       <Item.Description>{description}</Item.Description>
       <Item.Extra>
         <Label basic size='large'>{price}</Label>
-        <Label basic size='large'><Icon name='calendar alternate outline'/>{dateFrom} - {dateTo}</Label>
+        <Label basic size='large'><Icon name='calendar alternate outline'/>{startDate}</Label>
         {
           tags ?
             tags.map(tag => (<Label key={tag} content={tag} />))
@@ -26,13 +28,20 @@ const SearchResult = ({title, city, state, dateFrom, dateTo, description, price,
 
 const SearchResults = () => (
   <Grid container>
+    <Grid.Row columns={2}>
+      <Grid.Column>
+        <Header>2 Results</Header>
+      </Grid.Column>
+      <Grid.Column mobile={16} textAlign='right'>
+        <SortBy />
+      </Grid.Column>
+    </Grid.Row>
     <Grid.Row>
       <Grid.Column>
         <Item.Group divided>
           <SearchResult
             title='Apartment Room'
-            dateFrom='6/1/19'
-            dateTo='7/31/19'
+            startDate='6/1/19'
             city='San Mateo'
             state='California'
             description='Single bedroom available'
@@ -41,8 +50,7 @@ const SearchResults = () => (
            />
          <SearchResult
            title='Apartment Room'
-           dateFrom='6/1/19'
-           dateTo='7/31/19'
+           startDate='6/1/19'
            city='San Mateo'
            state='California'
            description='Single bedroom available'
