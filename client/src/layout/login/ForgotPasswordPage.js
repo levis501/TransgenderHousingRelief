@@ -1,17 +1,17 @@
 import React from 'react';
 import {
   Container,
-  Grid
+  Grid,
 } from 'semantic-ui-react';
 
 import PageLayout from '../components/PageLayout';
-import LoginForm from '../../components/forms/LoginForm';
+import ForgotPasswordForm from '../../components/forms/ForgotPasswordForm';
 
-const loginFormStyle = {
+const formStyle = {
   margin: '1em 0'
 }
 
-const LoginPage = () => (
+const ForgotPasswordPage = () => (
   <PageLayout>
     <Container>
       <Grid>
@@ -20,7 +20,7 @@ const LoginPage = () => (
             mobile={14}
             tablet={9}
             computer={7}>
-            <LoginForm style={loginFormStyle} />
+            <ForgotPasswordForm style={formStyle} />
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -28,4 +28,4 @@ const LoginPage = () => (
   </PageLayout>
 )
 
-export default LoginPage;
+export default ForgotPasswordPage;
