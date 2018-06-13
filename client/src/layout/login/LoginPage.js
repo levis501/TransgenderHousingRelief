@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Container,
-  Grid,
-  Header
+  Grid
 } from 'semantic-ui-react';
 
 import PageLayout from '../components/PageLayout';
