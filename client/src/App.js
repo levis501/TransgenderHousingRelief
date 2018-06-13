@@ -5,6 +5,7 @@ import HomePage from './layout/homepage/HomePage';
 import SearchPage from './layout/search/SearchPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import LoginPage from './layout/login/LoginPage';
+import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
           <Route path='/feedback' component={FeedbackPage}/>
+          <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
           <Route path='/login' component={LoginPage}/>
         </Switch>
