@@ -10,6 +10,7 @@ export const tags = [
   { name: 'Trans Women', type: 'Community', color:'teal'},
   { name: 'Trans Men', type: 'Community', color:'teal' },
   { name: 'Non-Binary', type: 'Community', color:'teal' },
+  { name: 'Intersex', type: 'Community', color:'teal' },
   { name: 'GNC', type: 'Community', color:'teal'},
   { name: 'Queer', type: 'Community', color:'teal'},
   { name: 'Deaf', type: 'Community', color:'teal'},
