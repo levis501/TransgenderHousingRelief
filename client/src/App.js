@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './layout/homepage/HomePage';
 import SearchPage from './layout/search/SearchPage';
-import Feedback from './layout/feedback/FeedbackPage';
+import FeedbackPage from './layout/feedback/FeedbackPage';
+import LoginPage from './layout/login/LoginPage';
 
 class App extends Component {
   render() {
@@ -12,7 +13,8 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
-          <Route path='/feedback' component={Feedback}/>
+          <Route path='/feedback' component={FeedbackPage}/>
+          <Route path='/login' component={LoginPage}/>
         </Switch>
       </Router>
     );
