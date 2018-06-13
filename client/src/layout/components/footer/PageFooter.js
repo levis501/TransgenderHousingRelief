@@ -6,6 +6,7 @@ import {
   Header,
   List
 } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const FooterStyle = {
   padding: '3em 0em',
@@ -22,9 +23,9 @@ const PageFooter = () => (
               Help
             </Header>
             <List link inverted>
-              <List.Item as='a'>FAQ</List.Item>
-              <List.Item as='a'>Contact Us</List.Item>
-              <List.Item as='a'>Feedback</List.Item>
+              <List.Item as={Link} to='/faq'>FAQ</List.Item>
+              <List.Item as={Link} to='/contact'>Contact Us</List.Item>
+              <List.Item as={Link} to='/feedback'>Feedback</List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={12}>
