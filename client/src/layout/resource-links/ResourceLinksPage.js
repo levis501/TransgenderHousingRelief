@@ -24,7 +24,7 @@ const Row = (row, filter) => {
       </Table.Cell>
       <Table.Cell>
         {/* Don't display the tag associated with the filter, since it is redundant */}
-        {row.tags.map((t) => (t === filter) ? null : (<Label>{t}</Label>))}
+        {row.tags.map((t) => (t === filter) ? null : (<Label className='tableCellLabel'>{t}</Label>))}
       </Table.Cell>
     </Table.Row >
   )
