@@ -19,7 +19,7 @@ const MissionStatement = () => (
   <Segment vertical textAlign='center' style={SegmentStyle}>
     <Header as='h1'>Mission Statement</Header>
     <p style={{fontSize: '1.33em'}}>
-      Craigslist for emergency housing of course
+      Housing classifieds for transgender, intersex, and gender nonconforming individuals.
     </p>
   </Segment>
 )
