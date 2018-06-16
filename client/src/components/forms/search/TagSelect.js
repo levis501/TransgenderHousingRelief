@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Dropdown, Form, Label } from 'semantic-ui-react';
 
-import { tags } from '../../data/tags';
+import { tags } from '../../../data/tags';
 
 const tagOptions = tags.map(item => {
   return {
