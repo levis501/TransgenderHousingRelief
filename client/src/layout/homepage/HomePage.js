@@ -1,11 +1,11 @@
 import React from 'react';
 import {
   Button,
-  Icon,
   Container,
-  Segment,
+  Icon,
   Grid,
-  Header
+  Header,
+  Segment
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
@@ -19,34 +19,72 @@ const MissionStatement = () => (
   <Segment vertical textAlign='center' style={SegmentStyle}>
     <Header as='h1'>Mission Statement</Header>
     <p style={{fontSize: '1.33em'}}>
-      Craigslist for emergency housing of course
+      Housing classifieds for transgender, intersex, and gender nonconforming individuals.
     </p>
   </Segment>
 )
 
 const Actions = () => (
-  <Segment vertical textAlign='center' style={SegmentStyle}>
-    <Grid stackable>
-      <Grid.Row>
-        <Grid.Column width={8}>
-          <Header as='h2'>Search Offered</Header>
-          <p>asfo jaosif aoiem aiofefiuaneiuf</p>
-          <Button as={Link} to='/search-offered' size='large'>
-            Get Started
-            <Icon name='right arrow' />
-          </Button>
-        </Grid.Column>
-        <Grid.Column width={8}>
-          <Header as='h2'>Search Wanted</Header>
-          <p>asfo jaosif aoiem aiofefiuaneiuf</p>
-          <Button as={Link} to='/offer-housing' size='large'>
-            Get Started
-            <Icon name='right arrow' />
-          </Button>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-  </Segment>
+  <React.Fragment>
+    <Segment vertical style={SegmentStyle}>
+      <Grid stackable>
+        <Grid.Row centered>
+          <Grid.Column width={6} textAlign='center'>
+            <Header as='h2'>Emergency Offered</Header>
+            <p>asfo jaosif aoiem aiofefiuaneiuf</p>
+            <Button as={Link} to='/search-offered' size='large'>
+              Search
+              <Icon name='right search' />
+            </Button>
+          </Grid.Column>
+          <Grid.Column width={6} textAlign='center'>
+            <Header as='h2'>Emergency Wanted</Header>
+            <p>asfo jaosif aoiem aiofefiuaneiuf</p>
+            <Button as={Link} to='/search-wanted' size='large'>
+              Search
+              <Icon name='right search' />
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+    <Segment vertical textAlign='center' style={SegmentStyle}>
+      <Grid stackable>
+        <Grid.Row centered>
+          <Grid.Column width={6} textAlign='center'>
+            <Header as='h2'>Offered</Header>
+            <p>asfo jaosif aoiem aiofefiuaneiuf</p>
+            <Button as={Link} to='/search-offered' size='large'>
+              Search
+              <Icon name='right search' />
+            </Button>
+          </Grid.Column>
+          <Grid.Column width={6} textAlign='center'>
+            <Header as='h2'>Wanted</Header>
+            <p>asfo jaosif aoiem aiofefiuaneiuf</p>
+            <Button as={Link} to='/search-wanted' size='large'>
+              Search
+              <Icon name='right search' />
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+    <Segment vertical style={SegmentStyle}>
+      <Grid stackable>
+        <Grid.Row centered>
+          <Grid.Column width={6} textAlign='center'>
+            <Header as='h2'>Submit Ad</Header>
+            <p>asfo jaosif aoiem aiofefiuaneiuf</p>
+            <Button as={Link} to='/submit' size='large'>
+              Get Started
+              <Icon name='right arrow' />
+            </Button>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    </Segment>
+  </React.Fragment>
 )
 
 const Announcements = () => (
