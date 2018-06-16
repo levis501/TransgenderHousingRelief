@@ -4,4 +4,4 @@ body {
   font-family: sans-serif;
 }
 
-.tableCellLabel { margin: 0.1em; }
+.ui.label.tableCellLabel { margin: 0.1em; }
