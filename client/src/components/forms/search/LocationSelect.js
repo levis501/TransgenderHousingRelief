@@ -65,8 +65,8 @@ class LocationSelect extends Component {
 
     return (
       <Form.Field disabled={this.isAnywhereSelected()}>
-        <label>Cities</label>
-        <Dropdown fluid search selection multiple
+        <label>{this.props.singleCity ? 'City' : 'Cities'}</label>
+        <Dropdown fluid search selection multiple={!this.props.singleCity}
           options={cityOptions}
           value={this.state.cities}
           onChange={this.onChangeCities}
@@ -75,7 +75,7 @@ class LocationSelect extends Component {
     );
   }
   renderDistance() {
-    if (!this.state.state) return null;
+    if (!this.state.state || this.props.disableDistance) return null;
     return (
       <Form.Field disabled={this.isAnywhereSelected()}>
         <label>Distance</label>
@@ -119,7 +119,9 @@ class LocationSelect extends Component {
 }
 
 LocationSelect.propTypes = {
-  disableAnywhere: PropTypes.bool
+  singleCity: PropTypes.bool,
+  disableAnywhere: PropTypes.bool,
+  disableDistance: PropTypes.bool
 }
 
 export default LocationSelect;

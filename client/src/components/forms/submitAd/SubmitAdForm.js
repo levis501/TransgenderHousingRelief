@@ -24,6 +24,9 @@ class SubmitAdForm extends React.Component {
   onSelectAdType(adType) {
     this.setState({adType});
   }
+  isOfferedAd() {
+    return this.state.adType === 'offered';
+  }
   render() {
     return (
       <Form>
@@ -41,7 +44,9 @@ class SubmitAdForm extends React.Component {
             <Grid.Column width={8}>
               <Form.Field>
                 <LocationSelect
-                  disableAnywhere={this.state.adType === 'offered'}
+                  disableAnywhere={this.isOfferedAd()}
+                  disableDistance={this.isOfferedAd()}
+                  singleCity={this.isOfferedAd()}
                   />
               </Form.Field>
               <Form.Group>
