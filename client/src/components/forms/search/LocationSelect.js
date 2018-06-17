@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Form, Dropdown } from 'semantic-ui-react';
 
 import { states, cities } from '../../../data/locations';
@@ -53,6 +54,9 @@ class LocationSelect extends Component {
   onChangeDistance(e, props) {
     this.setState({distance: props.value});
   }
+  isAnywhereSelected() {
+    return !this.props.disableAnywhere && this.state.anywhere;
+  }
   renderCities() {
     const { state } = this.state;
     if (!state) return null;
@@ -60,7 +64,7 @@ class LocationSelect extends Component {
     const cityOptions = this.getCityOptionsFromState(this.state.state);
 
     return (
-      <Form.Field disabled={this.state.anywhere}>
+      <Form.Field disabled={this.isAnywhereSelected()}>
         <label>Cities</label>
         <Dropdown fluid search selection multiple
           options={cityOptions}
@@ -73,7 +77,7 @@ class LocationSelect extends Component {
   renderDistance() {
     if (!this.state.state) return null;
     return (
-      <Form.Field disabled={this.state.anywhere}>
+      <Form.Field disabled={this.isAnywhereSelected()}>
         <label>Distance</label>
         <Dropdown search fluid selection
           options={distanceOptions}
@@ -86,11 +90,15 @@ class LocationSelect extends Component {
   render() {
     return (
     <React.Fragment>
-      <Form.Checkbox label='Anywhere'
-        checked={this.state.anywhere}
-        onClick={this.onClickAnywhereCheckbox}
-        />
-      <Form.Field disabled={this.state.anywhere}>
+      {
+        this.props.disableAnywhere ? null : (
+          <Form.Checkbox label='Anywhere'
+          checked={this.state.anywhere}
+          onClick={this.onClickAnywhereCheckbox}
+          />
+        )
+      }
+      <Form.Field disabled={this.isAnywhereSelected()}>
         <label>State</label>
         <Dropdown search fluid selection
           placeholder='State'
@@ -108,6 +116,10 @@ class LocationSelect extends Component {
     </React.Fragment>
     )
   }
+}
+
+LocationSelect.propTypes = {
+  disableAnywhere: PropTypes.bool
 }
 
 export default LocationSelect;

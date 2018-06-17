@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './layout/homepage/HomePage';
 import SearchPage from './layout/search/SearchPage';
+import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import LoginPage from './layout/login/LoginPage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
@@ -16,6 +17,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
+          <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/feedback' component={FeedbackPage}/>
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
