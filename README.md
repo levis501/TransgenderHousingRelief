@@ -6,13 +6,21 @@
 
 [Project Specifications](https://docs.google.com/document/d/1zsxILMFHKN7sZAug3qIxRt-fNpGrYzKyp1UQJWHWNv4/edit?usp=sharing)
 
+[Sketch of an object model for the site](https://docs.google.com/document/d/1Lzxzprs_Q-jAaLlXGSIyzdtvmffS9dtjITb1kU7h-M0/edit?usp=sharing)
+
+[Page Layout Designs](https://docs.google.com/document/d/1MelRd4xCZ8p825LSN8FhGLW2B1CiLUXY0zu9jhhfJrI/edit?usp=sharing)
+
 ### Tech Stack
 
 The frontend will use [React](https://reactjs.org/). The backend will use [Node](https://nodejs.org/), [Express](https://expressjs.com/), and [MongoDB](https://www.mongodb.com/). The additional libraries that will be used are elaborated in more detail in the [Project Specifications](https://docs.google.com/document/d/1zsxILMFHKN7sZAug3qIxRt-fNpGrYzKyp1UQJWHWNv4/edit?usp=sharing).
 
 ## Contributing
 
-Pull the repository, then when you want to submit a contribution, create a pull request for your changes.
+Fork the repository, claim an issue, and when you're ready to submit a contribution, create a pull request for your changes to be code reviewed.
+
+### Running the Project
+
+After cloning the project, open a command line in the client or server directory. Run `yarn install` to install the local node modules, and `yarn start` to run the client.
 
 ## Communication
 
