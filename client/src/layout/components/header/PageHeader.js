@@ -23,7 +23,7 @@ const PageHeader = () => (
   <Container style={{marginTop: '1em', marginBottom: '1em'}}>
     <Grid>
       <Grid.Row>
-        <Grid.Column width={6}>
+        <Grid.Column width={9}>
           <HeaderLogo />
         </Grid.Column>
         <Grid.Column width={6} floated='right'>

@@ -5,8 +5,8 @@ import {
 } from 'semantic-ui-react';
 
 import PageLayout from '../components/PageLayout';
-import Search from '../../components/search/Search';
-import SearchResults from '../../components/search/SearchResults';
+import Search from '../../components/forms/search/Search';
+import SearchResults from '../../components/forms/search/SearchResults';
 
 class SearchPage extends Component {
   render() {
