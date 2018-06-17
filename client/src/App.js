@@ -6,6 +6,7 @@ import SearchPage from './layout/search/SearchPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
+import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
@@ -19,6 +20,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
+          <Route path='/faq' component={FaqPage}/>
           <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
           <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
           <Route path='/feedback' component={FeedbackPage}/>
