@@ -8,6 +8,7 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.2.0",
     "react-scripts": "1.1.4",
     "semantic-ui-calendar-react": "^0.4.6",
     "semantic-ui-css": "^2.3.1",

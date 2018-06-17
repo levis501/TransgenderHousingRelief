@@ -6,6 +6,7 @@ import SearchPage from './layout/search/SearchPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
+import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/legal' render={() => (<ResourceLinksPage filter='legal-help' title='Legal Resources' />)} />
           <Route path='/housing-resources' render={() => (<ResourceLinksPage filter='housing' title='Housing Resources' />)} />
+          <Route path='/faq' component={FaqPage}/>
           <Route path='/feedback' component={FeedbackPage}/>
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
