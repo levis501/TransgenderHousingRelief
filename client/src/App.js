@@ -20,9 +20,9 @@ class App extends Component {
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
-          <Route path='/legal' render={() => (<ResourceLinksPage filter='legal-help' title='Legal Resources' />)} />
-          <Route path='/housing-resources' render={() => (<ResourceLinksPage filter='housing' title='Housing Resources' />)} />
           <Route path='/faq' component={FaqPage}/>
+          <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
+          <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
           <Route path='/feedback' component={FeedbackPage}/>
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
