@@ -8,7 +8,6 @@ import {
   Accordion
 } from 'semantic-ui-react';
 
-import { Link } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import { faqData } from '../../data/faq';
 
