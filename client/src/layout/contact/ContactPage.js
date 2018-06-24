@@ -12,27 +12,26 @@ import {
 import PageLayout from '../components/PageLayout';
 import TextAreaWithLimit from '../../components/forms/TextAreaWithLimit';
 
-const categoryOptions = [
-  { value: 'suggestion', text: 'Suggestion' },
-  { value: 'bug', text: 'Bug' },
-  { value: 'general', text: 'General Feedback' }
-];
-
-class FeedbackForm extends Component {
+class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: '',
+      email: '',
       subject: '',
-      category: '',
       body: '',
       bodyOverLimit: false
     }
-    this.onChangeCategory = this.onChangeCategory.bind(this);
+    this.onChangeName = this.onChangeName.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeSubjectText = this.onChangeSubjectText.bind(this);
     this.onChangeBodyText = this.onChangeBodyText.bind(this);
   }
-  onChangeCategory(e, props) {
-    this.setState({ category: props.value });
+  onChangeName(e, props) {
+    this.setState({ name: props.value });
+  }
+  onChangeEmail(e, props) {
+    this.setState({ email: props.value });
   }
   onChangeSubjectText(e, props) {
     this.setState({ subject: props.value });
@@ -44,12 +43,18 @@ class FeedbackForm extends Component {
     return (
       <Form>
         <Form.Field>
-          <label>Category</label>
-          <Dropdown selection
-            options={categoryOptions}
-            value={this.state.category}
-            onChange={this.onChangeCategory}
-          />
+          <label>Name</label>
+          <Input
+            value={this.state.name}
+            onChange={this.onChangeName}
+            />
+        </Form.Field>
+        <Form.Field>
+          <label>Email</label>
+          <Input
+            value={this.state.email}
+            onChange={this.onChangeEmail}
+            />
         </Form.Field>
         <Form.Field>
           <label>Subject</label>
@@ -80,14 +85,14 @@ class FeedbackForm extends Component {
   }
 }
 
-const FeedbackPage = () => (
+const ContactPage = () => (
   <PageLayout>
     <Container>
-      <Header as='h1'>Feedback</Header>
-      <FeedbackForm/>
+      <Header as='h1'>Contact Us</Header>
+      <ContactForm/>
     </Container>
   </PageLayout>
 )
 
 
-export default FeedbackPage;
+export default ContactPage;
