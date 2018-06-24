@@ -12,9 +12,9 @@ import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 import RegistrationPage from './layout/register/RegistrationPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import ContactPage from './layout/contact/ContactPage';
-import TermsOfServicePage from './layout/legal/TermsOfServicePage';
-import PrivacyPolicyPage from './layout/legal/PrivacyPolicyPage';
-import DisclaimerPage from './layout/legal/DisclaimerPage';
+import TermsOfServicePage from './layout/legal/informational/TermsOfServicePage';
+import PrivacyPolicyPage from './layout/legal/informational/PrivacyPolicyPage';
+import DisclaimerPage from './layout/legal/informational/DisclaimerPage';
 import NotFoundPage from './layout/NotFoundPage';
 
 class App extends Component {

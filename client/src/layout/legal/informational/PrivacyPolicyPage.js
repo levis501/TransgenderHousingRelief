@@ -3,7 +3,7 @@ import {
   Header
 } from 'semantic-ui-react';
 
-import PageLayout from '../components/PageLayout';
+import PageLayout from '../../components/PageLayout';
 import LegalTextContainer from './LegalTextContainer';
 
 const PrivacyPolicyPage = () => (
