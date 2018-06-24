@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-  Header
-} from 'semantic-ui-react';
 
 import PageLayout from '../../components/PageLayout';
 import LegalTextContainer from './LegalTextContainer';
@@ -10,7 +7,7 @@ import PrivacyPolicyText from '../text/PrivacyPolicyText';
 
 const PrivacyPolicyPage = () => (
   <PageLayout>
-    <LegalTextContainer>
+    <LegalTextContainer agreementTitle='Privacy Policy'>
       <PrivacyPolicyText/>
     </LegalTextContainer>
   </PageLayout>

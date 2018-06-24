@@ -1,12 +1,16 @@
 import React from 'react';
-import { Container } from 'semantic-ui-react';
+import {
+  Container,
+  Header
+} from 'semantic-ui-react';
 
-const LegalTextContainer = ({children}) => (
+const LegalTextContainer = ({children, agreementTitle}) => (
   <Container text
     style={{
       marginTop: '1em',
       marginBottom: '3em'
     }}>
+    <Header as='h1'>{agreementTitle}</Header>
     {children}
   </Container>
 );
