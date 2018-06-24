@@ -15,6 +15,7 @@ import ContactPage from './layout/contact/ContactPage';
 import TermsOfServicePage from './layout/legal/TermsOfServicePage';
 import PrivacyPolicyPage from './layout/legal/PrivacyPolicyPage';
 import DisclaimerPage from './layout/legal/DisclaimerPage';
+import NotFoundPage from './layout/NotFoundPage';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
           <Route path='/tos' component={TermsOfServicePage}/>
           <Route path='/disclaimer' component={DisclaimerPage}/>
           <Route path='/privacy' component={PrivacyPolicyPage}/>
+          <Route component={NotFoundPage}/>
         </Switch>
       </Router>
     );
