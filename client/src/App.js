@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from './layout/homepage/HomePage';
 import SearchPage from './layout/search/SearchPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
-import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
+import HousingResourcesPage from './layout/resource-links/HousingResourcesPage';
+import LegalResourcesPage from './layout/resource-links/LegalResourcesPage';
 import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
@@ -26,8 +27,8 @@ class App extends Component {
           <Route path='/search-offered' component={SearchPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage}/>
-          <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
-          <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
+          <Route path='/housing-resources' component={HousingResourcesPage}/>
+          <Route path='/legal' component={LegalResourcesPage}/>
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
           <Route path='/login' component={LoginPage}/>
