@@ -6,7 +6,13 @@ import PageHeader from './header/PageHeader';
 const PageLayout = ({children}) => (
   <div>
     <PageHeader />
-      {children}
+      <div
+        style={{
+          minHeight: '20em'
+        }}
+        >
+        {children}
+      </div>
     <PageFooter />
   </div>
 );
