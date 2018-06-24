@@ -18,23 +18,24 @@ const categoryOptions = [
   { value: 'general', text: 'General Feedback' }
 ];
 
-class ContactForm extends Component {
+class FeedbackForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: '',
+      subject: '',
+      category: '',
       body: '',
       bodyOverLimit: false
     }
     this.onChangeCategory = this.onChangeCategory.bind(this);
-    this.onChangeTitleText = this.onChangeTitleText.bind(this);
+    this.onChangeSubjectText = this.onChangeSubjectText.bind(this);
     this.onChangeBodyText = this.onChangeBodyText.bind(this);
   }
   onChangeCategory(e, props) {
     this.setState({ category: props.value });
   }
-  onChangeTitleText(e, props) {
-    this.setState({ title: props.value });
+  onChangeSubjectText(e, props) {
+    this.setState({ subject: props.value });
   }
   onChangeBodyText(body, bodyOverLimit) {
     this.setState({ body, bodyOverLimit });
@@ -51,10 +52,10 @@ class ContactForm extends Component {
           />
         </Form.Field>
         <Form.Field>
-          <label>Title</label>
+          <label>Subject</label>
           <Input
-            value={this.state.title}
-            onChange={this.onChangeTitleText}
+            value={this.state.subject}
+            onChange={this.onChangeSubjectText}
             />
         </Form.Field>
         <Form.Field>
@@ -83,7 +84,7 @@ const FeedbackPage = () => (
   <PageLayout>
     <Container>
       <Header as='h1'>Feedback</Header>
-      <ContactForm/>
+      <FeedbackForm/>
     </Container>
   </PageLayout>
 )
