@@ -23,10 +23,12 @@ const PageHeader = () => (
   <Container style={{marginTop: '1em', marginBottom: '1em'}}>
     <Grid>
       <Grid.Row>
-        <Grid.Column width={9}>
+        <Grid.Column width={8}>
           <HeaderLogo />
         </Grid.Column>
-        <Grid.Column width={6} floated='right'>
+        <Grid.Column floated='right'
+          mobile={8} tablet={6} computer={6} largeScreen={6} widescreen={6}
+          >
           <UserControl />
         </Grid.Column>
       </Grid.Row>
