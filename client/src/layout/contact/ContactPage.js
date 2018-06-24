@@ -88,7 +88,7 @@ class ContactForm extends Component {
 const ContactPage = () => (
   <PageLayout>
     <Container>
-      <Header as='h1'>Contact</Header>
+      <Header as='h1'>Contact Us</Header>
       <ContactForm/>
     </Container>
   </PageLayout>
