@@ -6,8 +6,8 @@ import ResourceLinks from './ResourceLinks';
 export default () => (
     <PageLayout>
         <Container>
-            <Header as='h1'>Housing Resources</Header>
             <ResourceLinks
+                title='Housing Resources'
                 recordFilter={r => (!r.tags.some((tag) => (tag).match(/^legal-.+/i)))}
                 tagDisplayFilter={(tag) => (!tag.match(/^(housing|us|us-states)$/i))}
             />
