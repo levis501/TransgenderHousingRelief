@@ -36,7 +36,7 @@ class ResourceTagSelect extends Component {
     return (
       <Form>
         <Form.Input label='Filter: '>
-          <Dropdown fluid selection search multiple placeholder='Select tags...'
+          <Dropdown fluid selection multiple placeholder='Select tags...'
             options={this.props.allTags.map((item) => ({ text: item, value: item }))}
             value={this.state.tags} onChange={this.onChangeTags}
             search={this.search.bind(this)}

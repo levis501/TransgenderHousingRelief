@@ -4,7 +4,6 @@ import {
   Header,
   Table,
   Label,
-  Grid,
 } from 'semantic-ui-react';
 import ResourceTagSelect from './ResourceTagSelect';
 import resources from '../../data/legal-housing-resources.json';
@@ -51,7 +50,7 @@ class ResourceLinks extends Component {
 
   Row = (row, tagDisplayFilter) => {
     return (
-      <Table.Row>
+      <Table.Row key={row.name+row.url} >
         <Table.Cell>
           <a href={row.url}>{row.name}</a>
         </Table.Cell>
@@ -63,7 +62,7 @@ class ResourceLinks extends Component {
         </Table.Cell>
         <Table.Cell>
           {row.tags.filter(tagDisplayFilter)
-            .map(tag => (<Label className='tableCellLabel'>{tag}</Label>))
+            .map(tag => (<Label key={row.name+row.url+tag} className='tableCellLabel'>{tag}</Label>))
           }
         </Table.Cell>
       </Table.Row >
@@ -81,7 +80,7 @@ class ResourceLinks extends Component {
           <Table.Header>
             <Table.Row>
               {headerText.map((title, i) =>
-                (i == 0)
+                (i === 0)
                   ? this.SortingHeader(title)
                   : <Table.HeaderCell key={i} padding='0' margin='0'>{title}</Table.HeaderCell>
               )}
