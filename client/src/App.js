@@ -12,6 +12,9 @@ import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 import RegistrationPage from './layout/register/RegistrationPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import ContactPage from './layout/contact/ContactPage';
+import TermsOfServicePage from './layout/legal/TermsOfServicePage';
+import PrivacyPolicyPage from './layout/legal/PrivacyPolicyPage';
+import DisclaimerPage from './layout/legal/DisclaimerPage';
 
 class App extends Component {
   render() {
@@ -30,6 +33,9 @@ class App extends Component {
           <Route path='/signup' component={RegistrationPage}/>
           <Route path='/feedback' component={FeedbackPage}/>
           <Route path='/contact' component={ContactPage}/>
+          <Route path='/tos' component={TermsOfServicePage}/>
+          <Route path='/disclaimer' component={DisclaimerPage}/>
+          <Route path='/privacy' component={PrivacyPolicyPage}/>
         </Switch>
       </Router>
     );
