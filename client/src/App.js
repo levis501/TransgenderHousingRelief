@@ -19,6 +19,7 @@ import TermsOfServiceAgreementPage from './layout/legal/agreement/TermsOfService
 import PrivacyPolicyAgreementPage from './layout/legal/agreement/PrivacyPolicyAgreementPage';
 import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreementPage';
 import NotFoundPage from './layout/NotFoundPage';
+import ProfilePage from './layout/profile/ProfilePage';
 
 class App extends Component {
   render() {
@@ -31,6 +32,8 @@ class App extends Component {
           <Route path='/faq' component={FaqPage}/>
           <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
           <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
+
+          <Route path='/profile' component={ProfilePage}/>
 
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
