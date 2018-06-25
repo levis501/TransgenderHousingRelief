@@ -1,36 +1,19 @@
 import React from 'react';
-import { Grid, Item, Label, Pagination, Header, Icon } from 'semantic-ui-react';
+import { Grid, Item, Pagination, Header, Icon } from 'semantic-ui-react';
 
 import SortBy from './SortBy';
 
-const SearchResult = ({title, city, state, startDate, description, price, tags}) => (
-  <Item>
-    <Item.Content>
-      <Item.Header as='a'>
-        {title}
-      </Item.Header>
-      <Item.Meta>
-        <span>{city}, {state}</span>
-      </Item.Meta>
-      <Item.Description>{description}</Item.Description>
-      <Item.Extra>
-        <Label basic size='large'>{price}</Label>
-        <Label basic size='large'><Icon name='calendar alternate outline'/>{startDate}</Label>
-        {
-          tags ?
-            tags.map(tag => (<Label key={tag} content={tag} />))
-            : null
-        }
-      </Item.Extra>
-    </Item.Content>
-  </Item>
-)
+import SearchResult from './SearchResult';
 
-const SearchResults = () => (
+const SearchResults = ({showResultsNumber}) => (
   <Grid container>
     <Grid.Row columns={2}>
       <Grid.Column>
-        <Header>2 Results</Header>
+        {
+          showResultsNumber ? (
+            <Header>2 Results</Header>
+          ) : null
+        }
       </Grid.Column>
       <Grid.Column mobile={16} textAlign='right'>
         <SortBy />
