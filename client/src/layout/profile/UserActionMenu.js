@@ -17,7 +17,6 @@ const UserActionMenu = () => {
           <MenuItemsPublic username='someone' />
         )
       }
-
     </Menu>
   );
 }
@@ -34,11 +33,6 @@ const MenuItemsPrivate = () => (
       <Label color='teal'>1</Label>
       <span>
         <Icon name='exclamation circle' /> Notifications
-      </span>
-    </Menu.Item>
-    <Menu.Item as={Link} to='/account/settings'>
-      <span>
-        <Icon name='setting' /> Account Settings
       </span>
     </Menu.Item>
   </React.Fragment>

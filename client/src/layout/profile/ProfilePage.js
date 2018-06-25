@@ -1,33 +1,26 @@
 import React from 'react';
 import {
   Container,
-  Grid,
-  Header
+  Grid
 } from 'semantic-ui-react';
 
 import PageLayout from '../components/PageLayout';
-import SearchResults from '../../components/forms/search/SearchResults';
+import ProfileSubpages from './ProfileSubpages';
+
 import UserInfo from './UserInfo';
 import UserActionMenu from './UserActionMenu';
-
-const UserPostsList = () => (
-  <React.Fragment>
-    <Header as='h2'>Active Listings</Header>
-    <SearchResults/>
-  </React.Fragment>
-)
 
 const ProfilePage = () => (
   <PageLayout>
     <Container>
       <Grid stackable>
         <Grid.Row>
-          <Grid.Column width={6}>
+          <Grid.Column mobile={6} tablet={6} computer={4} largeScreen={4} wideScreen={4}>
             <UserInfo/>
             <UserActionMenu/>
           </Grid.Column>
-          <Grid.Column width={10}>
-            <UserPostsList/>
+          <Grid.Column mobile={10} tablet={10} computer={12} largeScreen={12} wideScreen={12}>
+            <ProfileSubpages/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
