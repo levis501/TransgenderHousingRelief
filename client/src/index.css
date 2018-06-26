@@ -5,3 +5,12 @@ body {
 }
 
 .ui.label.tableCellLabel { margin: 0.1em; }
+
+/*
+  Modals are not centered due to a defect in this version of Semantic UI React.
+  Apply a style to center them.
+  https://github.com/Semantic-Org/Semantic-UI-React/issues/2558
+*/
+.ui.page.modals.transition.visible {
+    display: flex !important;
+}

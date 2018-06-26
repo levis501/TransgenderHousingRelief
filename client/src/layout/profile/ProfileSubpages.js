@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import {
   Header,
   Menu
 } from 'semantic-ui-react';
 
 import SearchResults from '../../components/forms/search/SearchResults';
-import AccountSettings from './AccountSettings';
+import AccountSettings from './account-settings/AccountSettings';
 
 const UserPostsList = ({title}) => (
   <React.Fragment>
@@ -18,16 +19,16 @@ const UserPostsList = ({title}) => (
   </React.Fragment>
 )
 
-const ProfileSubpages = () => {
+const ProfileSubpages = (props) => {
   const isLoggedInUser = true;
 
   if (isLoggedInUser) {
     return (
-      <ProfileSubpagesPrivate/>
+      <ProfileSubpagesPrivate {...props} />
     );
   } else {
     return (
-      <ProfileSubpagesPublic/>
+      <ProfileSubpagesPublic />
     );
   }
 }
@@ -36,47 +37,53 @@ const ProfileSubpagesPublic = () => (
   <UserPostsList title='Active Listings' />
 );
 
-class ProfileSubpagesPrivate extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeTab: ''
+const menuItemNames = {
+  MyListings: {
+    name: 'My Listings',
+    path: ''
+  },
+  AccountSettings: {
+    name: 'Account Settings',
+    path: 'settings'
+  }
+};
+
+const ProfileSubpagesPrivate = (props)=> {
+  let renderSubpage = function(activeItem) {
+    switch (activeItem) {
+      case menuItemNames.AccountSettings.path: return (<AccountSettings/>);
+      default: return (<UserPostsList/>);
     }
-    this.onTabClick = this.onTabClick.bind(this);
   }
-  onTabClick(e,{name}) {
-    this.setState({ activeTab: name });
+
+  let activeItem;
+  if (props.match.url.startsWith('/profile/settings')) {
+    activeItem = menuItemNames.AccountSettings.path;
+  } else {
+    activeItem = menuItemNames.MyListings.path;
   }
-  renderActiveTab(activeTab) {
-    if (activeTab === 'Account Settings') {
-      return (
-        <AccountSettings/>
-      );
-    }
-    return (
-      <UserPostsList/>
-    );
-  }
-  render() {
-    const {activeTab} = this.state;
-    return (
-      <React.Fragment>
-        <Menu tabular>
-          <Menu.Item name='My Listings' icon='list'
-            active={activeTab === 'My Listings' || !activeTab}
-            onClick={this.onTabClick}
-            />
-          <Menu.Item name='Account Settings' icon='setting'
-            active={activeTab === 'Account Settings'}
-            onClick={this.onTabClick}
-            />
-        </Menu>
-        {
-          this.renderActiveTab(activeTab)
-        }
-      </React.Fragment>
-    )
-  }
+  const basePath = '/profile/'
+  return (
+    <React.Fragment>
+      <Menu tabular>
+        <Menu.Item icon='list'
+          as={Link}
+          to={`${basePath}${menuItemNames.MyListings.path}`}
+          name={menuItemNames.MyListings.name}
+          active={activeItem === menuItemNames.MyListings.path}
+          />
+        <Menu.Item icon='setting'
+          as={Link}
+          to={`${basePath}${menuItemNames.AccountSettings.path}`}
+          name={menuItemNames.AccountSettings.name}
+          active={activeItem === menuItemNames.AccountSettings.path}
+          />
+      </Menu>
+      {
+        renderSubpage(activeItem)
+      }
+    </React.Fragment>
+  );
 }
 
-export default ProfileSubpages;
+export default withRouter(ProfileSubpages);

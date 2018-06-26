@@ -4,9 +4,9 @@ import {
   Form
 } from 'semantic-ui-react';
 
-import SettingsBaseForm from './SettingsBaseForm';
-import SettingsHeader from './SettingsHeader';
-import HorizontalHeaderCell from '../../../components/styled-components/HorizontalHeaderCell';
+import SettingsBaseForm from './components/SettingsBaseForm';
+import SettingsHeader from './components/SettingsHeader';
+import HorizontalHeaderCell from '../../../../components/styled-components/HorizontalHeaderCell';
 
 const PersonalInfoForm = () => (
   <SettingsBaseForm>

@@ -35,6 +35,16 @@ const MenuItemsPrivate = () => (
         <Icon name='exclamation circle' /> Notifications
       </span>
     </Menu.Item>
+    <Menu.Item as={Link} to='/profile/settings/password'>
+      <span>
+        <Icon name='arrow alternate circle right outline' /> Change Password
+      </span>
+    </Menu.Item>
+    <Menu.Item as={Link} to='/profile/settings/avatar'>
+      <span>
+        <Icon name='arrow alternate circle right outline' /> Change Avatar
+      </span>
+    </Menu.Item>
   </React.Fragment>
 )
 

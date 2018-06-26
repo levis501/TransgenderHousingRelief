@@ -7,7 +7,7 @@ const headerCellStyle = {
 
 const HorizontalHeaderCell = ({children}) => (
   <Table.Cell
-    width={3}
+    width={4}
     style={headerCellStyle}>
     {children}
   </Table.Cell>
