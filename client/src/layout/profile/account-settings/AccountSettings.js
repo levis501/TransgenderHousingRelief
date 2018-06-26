@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactRouterPropTypes from 'react-router-prop-types';
 import { withRouter } from 'react-router-dom';
 
 import {
@@ -42,6 +43,9 @@ const menuItemNames = {
 const menuItemNamesArray = Object.values(menuItemNames);
 
 class AccountSettings extends React.Component {
+  static propTypes = {
+    match: ReactRouterPropTypes.match.isRequired
+  }
   renderSubpage(activeItem) {
     switch(activeItem) {
       case menuItemNames.Password.path: return (<PasswordSettings />);

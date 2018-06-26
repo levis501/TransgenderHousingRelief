@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Grid,
   Button,
@@ -17,5 +18,11 @@ const SettingsBaseForm = ({children, onSave}) => (
     </Grid>
   </Form>
 )
+
+SettingsBaseForm.propTypes = {
+  onSave: PropTypes.func,
+  children: PropTypes.element
+}
+
 
 export default SettingsBaseForm;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Grid,
   Header,
@@ -9,6 +10,9 @@ import {
 export const SettingsHeaderReadOnly = ({title}) => (
   <Header>{title}</Header>
 )
+SettingsHeaderReadOnly.propTypes = {
+  title: PropTypes.string
+}
 
 const SettingsHeader = ({title, editable, edit, onToggleEdit}) => (
   <React.Fragment>
@@ -36,5 +40,12 @@ const SettingsHeader = ({title, editable, edit, onToggleEdit}) => (
     </Grid>
   </React.Fragment>
 )
+SettingsHeader.propTypes = {
+  title: PropTypes.string,
+  editable: PropTypes.bool,
+  edit: PropTypes.bool,
+  onToggleEdit: PropTypes.func
+
+}
 
 export default SettingsHeader;

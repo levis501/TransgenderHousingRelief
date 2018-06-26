@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   Menu,
@@ -57,5 +58,9 @@ const MenuItemsPublic = ({username}) => (
     </Menu.Item>
   </React.Fragment>
 )
+
+MenuItemsPublic.propTypes = {
+  username: PropTypes.string,
+}
 
 export default UserActionMenu;

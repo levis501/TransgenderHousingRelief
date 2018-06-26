@@ -1,23 +1,12 @@
 import React from 'react';
+import ReactRouterPropTypes from 'react-router-prop-types';
 import { Link, withRouter } from 'react-router-dom';
 import {
-  Header,
   Menu
 } from 'semantic-ui-react';
 
-import SearchResults from '../../components/forms/search/SearchResults';
 import AccountSettings from './account-settings/AccountSettings';
-
-const UserPostsList = ({title}) => (
-  <React.Fragment>
-    {
-      title ? (
-        <Header as='h2'>{title}</Header>
-      ) : null
-    }
-    <SearchResults/>
-  </React.Fragment>
-)
+import UserPostsList from './UserPostsList';
 
 const ProfileSubpages = (props) => {
   const isLoggedInUser = true;
@@ -48,7 +37,7 @@ const menuItemNames = {
   }
 };
 
-const ProfileSubpagesPrivate = (props)=> {
+const ProfileSubpagesPrivate = (props) => {
   let renderSubpage = function(activeItem) {
     switch (activeItem) {
       case menuItemNames.AccountSettings.path: return (<AccountSettings/>);
@@ -84,6 +73,10 @@ const ProfileSubpagesPrivate = (props)=> {
       }
     </React.Fragment>
   );
+}
+
+ProfileSubpagesPrivate.propTypes = {
+  match: ReactRouterPropTypes.match.isRequired,
 }
 
 export default withRouter(ProfileSubpages);
