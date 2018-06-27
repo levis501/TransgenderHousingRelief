@@ -8,7 +8,7 @@ const PageLayout = ({children}) => (
     <PageHeader />
       <div
         style={{
-          minHeight: '20em'
+          minHeight: '25em'
         }}
         >
         {children}

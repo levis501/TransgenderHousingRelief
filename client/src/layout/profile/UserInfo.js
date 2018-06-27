@@ -10,10 +10,10 @@ import imgAvatar1 from '../../resources/img/avatars/avatar1.png';
 const UserInfo = () => (
   <Grid style={{marginBottom: '1em'}}>
     <Grid.Row>
-      <Grid.Column width={4}>
+      <Grid.Column width={5}>
         <Image avatar size='small' src={imgAvatar1}/>
       </Grid.Column>
-      <Grid.Column width={12}>
+      <Grid.Column width={11}>
         <Header as='h1'>Username</Header>
         <p>Member since: {'1/1/2018'}</p>
       </Grid.Column>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
   Menu,
@@ -17,7 +18,6 @@ const UserActionMenu = () => {
           <MenuItemsPublic username='someone' />
         )
       }
-
     </Menu>
   );
 }
@@ -36,9 +36,14 @@ const MenuItemsPrivate = () => (
         <Icon name='exclamation circle' /> Notifications
       </span>
     </Menu.Item>
-    <Menu.Item as={Link} to='/account/settings'>
+    <Menu.Item as={Link} to='/profile/settings/password'>
       <span>
-        <Icon name='setting' /> Account Settings
+        <Icon name='arrow alternate circle right outline' /> Change Password
+      </span>
+    </Menu.Item>
+    <Menu.Item as={Link} to='/profile/settings/avatar'>
+      <span>
+        <Icon name='arrow alternate circle right outline' /> Change Avatar
       </span>
     </Menu.Item>
   </React.Fragment>
@@ -53,5 +58,9 @@ const MenuItemsPublic = ({username}) => (
     </Menu.Item>
   </React.Fragment>
 )
+
+MenuItemsPublic.propTypes = {
+  username: PropTypes.string,
+}
 
 export default UserActionMenu;
