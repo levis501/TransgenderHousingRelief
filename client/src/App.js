@@ -7,6 +7,8 @@ import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
 import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
+import MessagesPage from './layout/messages/MessagesPage';
+import WriteMessagePage from './layout/messages/write/WriteMessagePage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 import RegistrationPage from './layout/register/RegistrationPage';
@@ -35,6 +37,12 @@ class App extends Component {
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>
+          <Route path='/message/inbox' component={MessagesPage}/>
+          <Route path='/messages/sent' component={MessagesPage}/>
+          <Route path='/messages/drafts' component={MessagesPage}/>
+          <Route path='/messages/trash' component={MessagesPage}/>
+          <Route path='/messages/write' component={WriteMessagePage}/>
+          <Route path='/messages' component={MessagesPage}/>
 
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>

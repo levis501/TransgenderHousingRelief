@@ -37,10 +37,10 @@ const UserInfo = () => (
         </Link>
       </Grid.Column>
       <Grid.Column width={8} textAlign='right'>
-        <Label as={Link} to='/account/messages'>
+        <Label as={Link} to='/messages'>
           <Icon name='mail' /> 2
         </Label>
-        <Label as={Link} to='/account/notifications'>
+        <Label as={Link} to='/notifications'>
           <Icon name='exclamation circle' /> 4
         </Label>
       </Grid.Column>
