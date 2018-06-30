@@ -20,6 +20,7 @@ import PrivacyPolicyAgreementPage from './layout/legal/agreement/PrivacyPolicyAg
 import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreementPage';
 import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
+import ListingPage from './layout/listing/ListingPage';
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchPage}/>
+          <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage}/>
           <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
