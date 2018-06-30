@@ -24,13 +24,13 @@ const UserActionMenu = () => {
 
 const MenuItemsPrivate = () => (
   <React.Fragment>
-    <Menu.Item as={Link} to='/account/messages'>
+    <Menu.Item as={Link} to='/messages'>
       <Label color='teal'>2</Label>
       <span>
         <Icon name='mail' /> Messages
       </span>
     </Menu.Item>
-    <Menu.Item as={Link} to='/account/notifications'>
+    <Menu.Item as={Link} to='/notifications'>
       <Label color='teal'>1</Label>
       <span>
         <Icon name='exclamation circle' /> Notifications
