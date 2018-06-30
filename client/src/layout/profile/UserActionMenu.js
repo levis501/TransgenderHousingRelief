@@ -56,6 +56,16 @@ const MenuItemsPublic = ({username}) => (
         <Icon name='mail' /> Send a Message
       </span>
     </Menu.Item>
+    <Menu.Item as={Link} to={`/message/${username}`}>
+      <span>
+        <Icon color='red' name='exclamation circle' /> Block User
+      </span>
+    </Menu.Item>
+    <Menu.Item as={Link} to={`/message/${username}`}>
+      <span>
+        <Icon color='red' name='exclamation circle' /> Report User
+      </span>
+    </Menu.Item>
   </React.Fragment>
 )
 
