@@ -8,7 +8,7 @@ import PageLayout from '../components/PageLayout';
 import Search from '../../components/forms/search/Search';
 import SearchResults from '../../components/forms/search/SearchResults';
 
-class SearchPage extends Component {
+class SeachOfferedPage extends Component {
   render() {
     return (
       <PageLayout>
@@ -22,4 +22,4 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage;
+export default SeachOfferedPage;

@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from './layout/homepage/HomePage';
-import SearchPage from './layout/search/SearchPage';
+import SearchOfferedPage from './layout/search/SearchOfferedPage';
+import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
 import FaqPage from './layout/faq/FaqPage';
@@ -30,7 +31,8 @@ class App extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={HomePage}/>
-          <Route path='/search-offered' component={SearchPage}/>
+          <Route path='/search-offered' component={SearchOfferedPage}/>
+          <Route path='/search-wanted' component={SearchWantedPage}/>
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage}/>
