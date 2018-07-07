@@ -3,15 +3,18 @@ import { Container } from 'semantic-ui-react';
 import PageLayout from '../components/PageLayout';
 import ResourceLinks from './ResourceLinks';
 
+const tagStartsWithLegal = tag => tag.match(/^legal-.+/i)
+const recordHasALegalTag = record => record.tags.some(tagStartsWithLegal)
+const tagDoesntStartWithHousingLegalOrUS = tag => !tag.match(/^(legal-|us|housing)/i)
 
-export default () => (
-  <PageLayout>
+export default () => {
+  return (<PageLayout>
     <Container>
       <ResourceLinks
         title='Legal Resources'
-        recordFilter={r => r.tags.some((tag) => (tag).match(/^legal-.+/i))}
-        tagDisplayFilter={(tag) => (!tag.match(/^(legal-.+|us|us-states)$/i))}
+        recordDisplayFilter={recordHasALegalTag}
+        tagDisplayFilter={tagDoesntStartWithHousingLegalOrUS}
       />
     </Container>
-  </PageLayout>
-)
+  </PageLayout>)
+}

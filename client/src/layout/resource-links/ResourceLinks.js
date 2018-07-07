@@ -40,7 +40,7 @@ class ResourceLinks extends Component {
 
   componentWillMount() {
     const tagSet = new Set();
-    resources.filter(this.props.recordFilter).forEach(
+    resources.filter(this.props.recordDisplayFilter).forEach(
       (record) => {
         record.tags.forEach((tag) => tagSet.add(tag))
       }
@@ -87,7 +87,7 @@ class ResourceLinks extends Component {
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {resources.filter(this.props.recordFilter)
+            {resources.filter(this.props.recordDisplayFilter)
               .filter(this.selectedTagsFilter.bind(this))
               .sort((r1, r2) => this.state.sortDirection * r1.name.localeCompare(r2.name))
               .map(r => this.Row(r, this.props.tagDisplayFilter))}
