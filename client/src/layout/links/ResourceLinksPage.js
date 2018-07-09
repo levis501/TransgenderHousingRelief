@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import {
   Container,
-  Button,
   Header,
   Table,
   Label,
@@ -14,11 +13,7 @@ import AllResources from '../../data/legal-housing-resources.json';
 import SortingHeader from './SortingHeader';
 
 
-class ResourceLinks extends Component {
-
-  constructor(props) {
-    super(props);
-  }
+class ResourceLinksPage extends Component {
 
   Row = (row, tagDisplayFilter) => {
     return (
@@ -57,7 +52,7 @@ class ResourceLinks extends Component {
   applyUrlParams() {
     const {isHousing, sort, selectedTags} = this.parseUrlParams()
     const selectedTagFilter = resource => selectedTags.every(s => resource.tags.some(r => r === s))
-    const resourceTypeFilter = resource => (isHousing == !resource.tags.some(tag => tag.match(/^legal/i)));
+    const resourceTypeFilter = resource => (isHousing === !resource.tags.some(tag => tag.match(/^legal/i)));
     const resourcesForType = AllResources.filter(resourceTypeFilter)
     const resources = resourcesForType.filter(selectedTagFilter).sort((r1, r2) => sort * r1.name.localeCompare(r2.name))
     const tagDisplayFilter = isHousing
@@ -84,12 +79,12 @@ class ResourceLinks extends Component {
   }
 
   setSort(sort) {
-    const {isHousing, _, selectedTags} = this.parseUrlParams()
+    const {isHousing, selectedTags} = this.parseUrlParams()
     this.redirect(isHousing, sort, selectedTags);
   }
 
   setSelectedTags(selectedTags) {
-    const {isHousing, sort, _} = this.parseUrlParams()
+    const {isHousing, sort} = this.parseUrlParams()
     this.redirect(isHousing, sort, selectedTags);
   }
 
@@ -100,9 +95,7 @@ class ResourceLinks extends Component {
 
   render() {
     const { resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.applyUrlParams()
-
     const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
-
     return (
       <PageLayout>
         <Container>
@@ -131,7 +124,7 @@ class ResourceLinks extends Component {
   }
 }
 
-ResourceLinks.contextTypes = {
+ResourceLinksPage.contextTypes = {
   router: PropTypes.shape({
     history: PropTypes.shape({
       push: PropTypes.func.isRequired,
@@ -141,6 +134,4 @@ ResourceLinks.contextTypes = {
   }).isRequired
 };
 
-
-
-export default withRouter(ResourceLinks);
+export default withRouter(ResourceLinksPage);

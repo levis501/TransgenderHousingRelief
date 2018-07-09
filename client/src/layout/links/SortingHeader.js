@@ -1,10 +1,7 @@
 import React from 'react'
 import {
-  Container,
   Icon,
-  Header,
   Table,
-  Label,
 } from 'semantic-ui-react'
 
 const SortingHeader = (props) => (

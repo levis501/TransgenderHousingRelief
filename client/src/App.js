@@ -5,8 +5,7 @@ import HomePage from './layout/homepage/HomePage';
 import SearchOfferedPage from './layout/search/SearchOfferedPage';
 import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
-import HousingResourcesPage from './layout/resource-links/HousingResourcesPage';
-import LegalResourcesPage from './layout/resource-links/LegalResourcesPage';
+import ResourceLinksPage from './layout/links/ResourceLinksPage';
 import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import MessagesPage from './layout/messages/MessagesPage';
@@ -25,7 +24,6 @@ import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreemen
 import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
 import ListingPage from './layout/listing/ListingPage';
-import ResourceLinks from './layout/resource-links/ResourceLinks';
 
 class App extends Component {
   render() {
@@ -39,7 +37,7 @@ class App extends Component {
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
 
-          <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinks} />
+          <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinksPage} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>
