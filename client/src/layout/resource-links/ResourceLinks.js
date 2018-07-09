@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { withRouter } from 'react-router-dom';
 import PageLayout from '../components/PageLayout';
 import {
   Container,
-  Icon,
+  Button,
   Header,
   Table,
   Label,
@@ -15,12 +16,8 @@ import SortingHeader from './SortingHeader';
 
 class ResourceLinks extends Component {
 
-  onChangeSorting() {
-    throw (new Error('onChangeSorting not yet implemeneted'))
-  }
-
-  onChangeTags(selectedTags) {
-    throw (new Error('onChangeTags not yet implemeneted'))
+  constructor(props) {
+    super(props);
   }
 
   Row = (row, tagDisplayFilter) => {
@@ -37,53 +34,36 @@ class ResourceLinks extends Component {
         </Table.Cell>
         <Table.Cell>
           {row.tags.filter(tagDisplayFilter)
-            .map(tag => (<Label key={row.name + row.url + tag} className='tableCellLabel'>{tag}</Label>))
+            .map(tag => (<Label as='a' key={row.name + row.url + tag} className='tableCellLabel' onClick={() => this.addTag(tag)}>{tag}</Label>))
           }
         </Table.Cell>
       </Table.Row >
     )
   }
 
-  renderTableHeader(sort) {
-    const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
-    return (
-      <Table.Header>
-        <Table.Row>
-          {headerText.map((title, i) =>
-            (i === 0)
-              ? < SortingHeader key='0' title={title} sort={sort} onChangeSorting={this.onChangeSorting}  />
-              : <Table.HeaderCell key={i} padding='0' margin='0'>{title}</Table.HeaderCell>
-          )}
-        </Table.Row>
-      </Table.Header>
-    )
-  }
-
   uniqueSortTags(tags) {
-    window.dbg = tags;
     return Array.from(new Set(tags.map(tag => tag.toLowerCase()))).sort()
   }
 
+
   parseUrlParams() {
     const params = this.props.match.params;
-
-    const selectedTags = params.selectedTags ? params.selectedTags.split(',') : []
-    const selectedTagFilter = resource => selectedTags.every(s => resource.tags.some(r => r === s))
-
-    const sort = params.sort || 1
-
     const isHousing = params.resourceType !== 'legal'
+    const selectedTags = params.selectedTags ? params.selectedTags.split(',') : []
+    const sort = params.sort || 1
+    return { isHousing, sort, selectedTags };
+  }
+
+  applyUrlParams() {
+    const {isHousing, sort, selectedTags} = this.parseUrlParams()
+    const selectedTagFilter = resource => selectedTags.every(s => resource.tags.some(r => r === s))
     const resourceTypeFilter = resource => (isHousing == !resource.tags.some(tag => tag.match(/^legal/i)));
     const resourcesForType = AllResources.filter(resourceTypeFilter)
-
     const resources = resourcesForType.filter(selectedTagFilter).sort((r1, r2) => sort * r1.name.localeCompare(r2.name))
-
     const tagDisplayFilter = isHousing
       ? tag => !tag.match(/^(housing|us)/i)
       : tag => !tag.match(/^(legal|housing|us)/i)
-
     const allTagsForResourceType = this.uniqueSortTags([].concat(...resourcesForType.map(resource => resource.tags)))
-
     const title = isHousing ? 'Housing Resoures' : 'Legal Resources'
     return {
       resources,
@@ -95,18 +75,52 @@ class ResourceLinks extends Component {
     }
   }
 
+  generateUrl(isHousing, sort, tags) {
+    return `/links/${isHousing ? 'housing' : 'legal'}/${sort}/${tags}`;
+  }
+
+  redirect(isHousing, sort, tags) {
+    this.context.router.history.push(this.generateUrl(isHousing, sort, this.uniqueSortTags(tags)));
+  }
+
+  setSort(sort) {
+    const {isHousing, _, selectedTags} = this.parseUrlParams()
+    this.redirect(isHousing, sort, selectedTags);
+  }
+
+  setSelectedTags(selectedTags) {
+    const {isHousing, sort, _} = this.parseUrlParams()
+    this.redirect(isHousing, sort, selectedTags);
+  }
+
+  addTag(newTag) {
+    const {isHousing, sort, selectedTags} = this.parseUrlParams()
+    this.redirect(isHousing, sort, selectedTags.concat(newTag));
+  }
 
   render() {
-    const { resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.parseUrlParams()
-    window.dbg = title;
+    const { resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.applyUrlParams()
+
+    const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
 
     return (
       <PageLayout>
         <Container>
           <Header as='h1'>{title}</Header>
-          <ResourceTagSelect allTags={allTagsForResourceType} selectedTags={selectedTags} onChangeTags={this.onChangeTags} />
+          <ResourceTagSelect
+            allTags={allTagsForResourceType}
+            selectedTags={selectedTags}
+            onChangeTags={this.setSelectedTags.bind(this)} />
           <Table celled padded>
-            {this.renderTableHeader(sort)}
+            <Table.Header>
+              <Table.Row>
+                {headerText.map((title, i) =>
+                  (i === 0)
+                    ? < SortingHeader key='0' title={title} sort={sort} onChangeSorting={this.setSort.bind(this)} />
+                    : <Table.HeaderCell key={i} padding='0' margin='0'>{title}</Table.HeaderCell>
+                )}
+              </Table.Row>
+            </Table.Header>            
             <Table.Body>
               {resources.map(r => this.Row(r, tagDisplayFilter))}
             </Table.Body>
@@ -116,5 +130,17 @@ class ResourceLinks extends Component {
     )
   }
 }
+
+ResourceLinks.contextTypes = {
+  router: PropTypes.shape({
+    history: PropTypes.shape({
+      push: PropTypes.func.isRequired,
+      replace: PropTypes.func.isRequired
+    }).isRequired,
+    staticContext: PropTypes.object
+  }).isRequired
+};
+
+
 
 export default withRouter(ResourceLinks);
