@@ -25,6 +25,7 @@ import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreemen
 import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
 import ListingPage from './layout/listing/ListingPage';
+import ResourceLinks from './layout/resource-links/ResourceLinks';
 
 class App extends Component {
   render() {
@@ -36,9 +37,9 @@ class App extends Component {
           <Route path='/search-wanted' component={SearchWantedPage}/>
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
-          <Route path='/faq' component={FaqPage}/>
-          <Route path='/housing-resources' component={HousingResourcesPage}/>
-          <Route path='/legal' component={LegalResourcesPage}/>
+          <Route path='/faq' component={FaqPage} />
+
+          <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinks} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>

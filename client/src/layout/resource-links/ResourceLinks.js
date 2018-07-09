@@ -1,56 +1,31 @@
 import React, { Component } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import PageLayout from '../components/PageLayout';
 import {
+  Container,
   Icon,
   Header,
   Table,
   Label,
 } from 'semantic-ui-react';
 import ResourceTagSelect from './ResourceTagSelect';
-import resources from '../../data/legal-housing-resources.json';
+import AllResources from '../../data/legal-housing-resources.json';
+import SortingHeader from './SortingHeader';
 
 
 class ResourceLinks extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { sortDirection: 1, allTags: [], selectedTags: [] };
-    this.rightAlignStyle = { marginRight: '0px' };
-  }
 
-  toggleSort() {
-    this.setState({ sortDirection: -this.state.sortDirection });
-  }
-
-  SortingHeader = (title) => {
-    return (
-      <Table.HeaderCell key='0' padding='0' margin='0'
-        onClick={this.toggleSort.bind(this)} >
-        {title}
-        <Icon name={(this.state.sortDirection > 0) ? 'arrow down' : 'arrow up'} />
-      </Table.HeaderCell >
-    )
+  onChangeSorting() {
+    throw (new Error('onChangeSorting not yet implemeneted'))
   }
 
   onChangeTags(selectedTags) {
-    this.setState({ selectedTags })
-  }
-
-  selectedTagsFilter = (record) =>
-    (this.state.selectedTags.every(selectedTag =>
-      record.tags.some(tag => (tag === selectedTag))));
-
-  componentWillMount() {
-    const tagSet = new Set();
-    resources.filter(this.props.recordDisplayFilter).forEach(
-      (record) => {
-        record.tags.forEach((tag) => tagSet.add(tag))
-      }
-    );
-    this.setState({ allTags: Array.from(tagSet) });
+    throw (new Error('onChangeTags not yet implemeneted'))
   }
 
   Row = (row, tagDisplayFilter) => {
     return (
-      <Table.Row key={row.name+row.url} >
+      <Table.Row key={row.name + row.url} >
         <Table.Cell>
           <a href={row.url}>{row.name}</a>
         </Table.Cell>
@@ -62,40 +37,84 @@ class ResourceLinks extends Component {
         </Table.Cell>
         <Table.Cell>
           {row.tags.filter(tagDisplayFilter)
-            .map(tag => (<Label key={row.name+row.url+tag} className='tableCellLabel'>{tag}</Label>))
+            .map(tag => (<Label key={row.name + row.url + tag} className='tableCellLabel'>{tag}</Label>))
           }
         </Table.Cell>
       </Table.Row >
     )
-  };
+  }
+
+  renderTableHeader(sort) {
+    const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
+    return (
+      <Table.Header>
+        <Table.Row>
+          {headerText.map((title, i) =>
+            (i === 0)
+              ? < SortingHeader key='0' title={title} sort={sort} onChangeSorting={this.onChangeSorting}  />
+              : <Table.HeaderCell key={i} padding='0' margin='0'>{title}</Table.HeaderCell>
+          )}
+        </Table.Row>
+      </Table.Header>
+    )
+  }
+
+  uniqueSortTags(tags) {
+    window.dbg = tags;
+    return Array.from(new Set(tags.map(tag => tag.toLowerCase()))).sort()
+  }
+
+  parseUrlParams() {
+    const params = this.props.match.params;
+
+    const selectedTags = params.selectedTags ? params.selectedTags.split(',') : []
+    const selectedTagFilter = resource => selectedTags.every(s => resource.tags.some(r => r === s))
+
+    const sort = params.sort || 1
+
+    const isHousing = params.resourceType !== 'legal'
+    const resourceTypeFilter = resource => (isHousing == !resource.tags.some(tag => tag.match(/^legal/i)));
+    const resourcesForType = AllResources.filter(resourceTypeFilter)
+
+    const resources = resourcesForType.filter(selectedTagFilter).sort((r1, r2) => sort * r1.name.localeCompare(r2.name))
+
+    const tagDisplayFilter = isHousing
+      ? tag => !tag.match(/^(housing|us)/i)
+      : tag => !tag.match(/^(legal|housing|us)/i)
+
+    const allTagsForResourceType = this.uniqueSortTags([].concat(...resourcesForType.map(resource => resource.tags)))
+
+    const title = isHousing ? 'Housing Resoures' : 'Legal Resources'
+    return {
+      resources,
+      selectedTags,
+      sort,
+      tagDisplayFilter,
+      allTagsForResourceType,
+      title,
+    }
+  }
 
 
   render() {
-    const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
+    const { resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.parseUrlParams()
+    window.dbg = title;
+
     return (
-      <React.Fragment>
-        <Header as='h1'>{this.props.title}</Header>
-        <ResourceTagSelect allTags={this.state.allTags.sort()} onChangeTags={this.onChangeTags.bind(this)} />
-        <Table celled padded>
-          <Table.Header>
-            <Table.Row>
-              {headerText.map((title, i) =>
-                (i === 0)
-                  ? this.SortingHeader(title)
-                  : <Table.HeaderCell key={i} padding='0' margin='0'>{title}</Table.HeaderCell>
-              )}
-            </Table.Row>
-          </Table.Header>
-          <Table.Body>
-            {resources.filter(this.props.recordDisplayFilter)
-              .filter(this.selectedTagsFilter.bind(this))
-              .sort((r1, r2) => this.state.sortDirection * r1.name.localeCompare(r2.name))
-              .map(r => this.Row(r, this.props.tagDisplayFilter))}
-          </Table.Body>
-        </Table>
-      </React.Fragment>
+      <PageLayout>
+        <Container>
+          <Header as='h1'>{title}</Header>
+          <ResourceTagSelect allTags={allTagsForResourceType} selectedTags={selectedTags} onChangeTags={this.onChangeTags} />
+          <Table celled padded>
+            {this.renderTableHeader(sort)}
+            <Table.Body>
+              {resources.map(r => this.Row(r, tagDisplayFilter))}
+            </Table.Body>
+          </Table>
+        </Container>
+      </PageLayout>
     )
   }
 }
 
-export default ResourceLinks;
+export default withRouter(ResourceLinks);

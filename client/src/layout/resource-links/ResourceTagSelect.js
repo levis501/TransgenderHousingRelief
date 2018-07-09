@@ -6,23 +6,23 @@ class ResourceTagSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tags: []
+      selectedTags: []
     }
     this.onChangeTags = this.onChangeTags.bind(this);
   }
 
   onTagClicked(tag) {
-    if (this.state.tags.includes(tag)) return;
-    this.setState({ tags: [...this.state.tags, tag] })
+    if (this.state.selectedTags.includes(tag)) return;
+    this.setState({ selectedTags: [...this.state.selectedTags, tag] })
   }
 
   onChangeTags(e, { value }) {
-    this.setState({ tags: value });
+    this.setState({ selectedTags: value });
     this.props.onChangeTags(value);
   }
 
   clearFilter() {
-    this.setState({ tags: [] });
+    this.setState({ selectedTags: [] });
     this.props.onChangeTags([]);
   }
 
@@ -38,11 +38,11 @@ class ResourceTagSelect extends Component {
         <Form.Input label='Filter: '>
           <Dropdown fluid selection multiple placeholder='Select tags...'
             options={this.props.allTags.map((item) => ({ text: item, value: item }))}
-            value={this.state.tags} onChange={this.onChangeTags}
+            value={this.state.selectedTags} onChange={this.onChangeTags}
             search={this.search.bind(this)}
           />
         </Form.Input>
-        {(this.state.tags.length < 2) ? null :
+        {(this.state.selectedTags.length < 2) ? null :
           <Button onClick={this.clearFilter.bind(this)}>Clear filter</Button>
         }
       </Form>
