@@ -13,6 +13,7 @@ import WriteMessagePage from './layout/messages/write/WriteMessagePage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 import RegistrationPage from './layout/register/RegistrationPage';
+import AgeVerificationPage from './layout/register/AgeVerificationPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import ContactPage from './layout/contact/ContactPage';
 import TermsOfServicePage from './layout/legal/informational/TermsOfServicePage';
@@ -51,10 +52,10 @@ class App extends Component {
           <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
           <Route path='/login' component={LoginPage}/>
-
           <Route path='/signup/tos' component={TermsOfServiceAgreementPage}/>
           <Route path='/signup/disclaimer' component={DisclaimerAgreementPage}/>
           <Route path='/signup/privacypolicy' component={PrivacyPolicyAgreementPage}/>
+          <Route path='/signup/age' component={AgeVerificationPage}/>
           <Route path='/signup' component={RegistrationPage}/>
 
           <Route path='/feedback' component={FeedbackPage}/>
