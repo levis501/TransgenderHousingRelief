@@ -19,8 +19,8 @@ const MenuLinksBottom = ({path}) => {
   return (
     <React.Fragment>
       <Menu.Item as={Link} to='/safety-tips' name='Safety Tips' active={path === '/safety-tips'} />
-      <Menu.Item as={Link} to='/housing-resources' name='Housing Resources' active={path === '/housing-resources'} />
-      <Menu.Item as={Link} to='/legal' name='Legal Resources' active={path === '/legal'} />
+      <Menu.Item as={Link} to='/links/housing' name='Housing Resources' active={path === '/housing-resources'} />
+      <Menu.Item as={Link} to='/links/legal' name='Legal Resources' active={path === '/legal'} />
     </React.Fragment>
   );
 }

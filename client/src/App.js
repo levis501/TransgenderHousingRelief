@@ -5,7 +5,7 @@ import HomePage from './layout/homepage/HomePage';
 import SearchOfferedPage from './layout/search/SearchOfferedPage';
 import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
-import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
+import ResourceLinksPage from './layout/links/ResourceLinksPage';
 import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import MessagesPage from './layout/messages/MessagesPage';
@@ -35,9 +35,9 @@ class App extends Component {
           <Route path='/search-wanted' component={SearchWantedPage}/>
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
-          <Route path='/faq' component={FaqPage}/>
-          <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
-          <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
+          <Route path='/faq' component={FaqPage} />
+
+          <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinksPage} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>
@@ -48,7 +48,7 @@ class App extends Component {
           <Route path='/messages/write' component={WriteMessagePage}/>
           <Route path='/messages' component={MessagesPage}/>
 
-          <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
+          <Route path='/login/forgot-username' component={ForgotUsernamePage} />
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
           <Route path='/login' component={LoginPage}/>
 
