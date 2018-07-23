@@ -4,9 +4,10 @@ import {
   Form,
   Button,
 } from 'semantic-ui-react';
+
 import escapeStringRegexp from 'escape-string-regexp';
 
-class ResourceTagSelect extends Component {
+class ResourceStateSelect extends Component {
   clearFilter() {
     this.props.onChangeTags([]);
   }
@@ -20,8 +21,8 @@ class ResourceTagSelect extends Component {
   render() {
     return (
       <Form>
-        <Form.Input label={this.props.title}>
-          <Dropdown selection multiple={this.props.multiple} placeholder={this.props.placeholder}
+        <Form.Input label='State: '>
+          <Dropdown selection placeholder='Select tags...'
             options={this.props.allTags.map((item) => ({ text: item, value: item }))}
             value={this.props.selectedTags} onChange={(e, v) => this.props.onChangeTags(v.value)}
             search={this.search.bind(this)}
@@ -35,4 +36,4 @@ class ResourceTagSelect extends Component {
   }
 }
 
-export default ResourceTagSelect;
+export default ResourceStateSelect;

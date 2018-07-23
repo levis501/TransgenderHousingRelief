@@ -11,6 +11,8 @@ import {
 import ResourceTagSelect from './ResourceTagSelect';
 import AllResources from '../../data/legal-housing-resources.json';
 import SortingHeader from './SortingHeader';
+import HousingLinksPage from './HousingLinksPage';
+import LegalLinksPage from './LegalLinksPage';
 
 
 class ResourceLinksPage extends Component {
@@ -61,6 +63,7 @@ class ResourceLinksPage extends Component {
     const allTagsForResourceType = this.uniqueSortTags([].concat(...resourcesForType.map(resource => resource.tags)))
     const title = isHousing ? 'Housing Resoures' : 'Legal Resources'
     return {
+      isHousing,
       resources,
       selectedTags,
       sort,
@@ -94,13 +97,16 @@ class ResourceLinksPage extends Component {
   }
 
   render() {
-    const { resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.applyUrlParams()
+    const { isHousing, resources, title, selectedTags, sort, tagDisplayFilter, allTagsForResourceType } = this.applyUrlParams()
     const headerText = ["Resource Name", "Description", "Phone Number", "Tags"];
     return (
       <PageLayout>
         <Container>
           <Header as='h1'>{title}</Header>
           <ResourceTagSelect
+            title={isHousing ? "State" : "Filter"}
+            multiple={!isHousing}
+            noSelectionText={isHousing ? 'Any' : 'Select tags...'}
             allTags={allTagsForResourceType}
             selectedTags={selectedTags}
             onChangeTags={this.setSelectedTags.bind(this)} />
