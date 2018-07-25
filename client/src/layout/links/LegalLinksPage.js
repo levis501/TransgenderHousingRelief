@@ -1,7 +1,6 @@
 
-import React, { Component } from 'react'
-import PropTypes from "prop-types"
-import { withRouter } from 'react-router-dom'
+import React from 'react'
+import { withRouter } from 'react-router'
 import {
   Container,
   Header,
@@ -11,43 +10,28 @@ import {
 } from 'semantic-ui-react'
 
 import PageLayout from '../components/PageLayout'
-import {LinksWithTagMatch, GetUniqueTags, DropdownOptionsForTags, TagSearch, UniqueSortTags } from '../../data/LinksData'
+import RedirectComponent from '../../components/RedirectComponent'
+import {LinksWithTagMatching, GetUniqueTags, DropdownOptionsForTags, TagSearch } from '../../data/LinksData'
 
-class LegalLinksPage extends Component {
+const urlParsers = {
+  tags: (tags) => (tags ? tags.split(',') : []),
+  sort: (sort) => (sort || 1),
+}
+
+const urlBuilders = {
+  tags: (tags) => (tags.join(','))
+}
+
+class LegalLinksPage extends RedirectComponent {
   constructor(props) {
-    super(props)
-    this.setSelectedTags = this.setSelectedTags.bind(this)
-    this.clearFilter = () => this.setSelectedTags([]);
-  }
-
-  generateUrl(sort, tags) {
-    return `/links/legal/${sort}/${tags}`;
-  }
-
-  redirect(sort, tags) {
-    this.context.router.history.push(this.generateUrl(sort, UniqueSortTags(tags)));
-  }
-
-  parseUrlParams() {
-    const params = this.props.match.params;
-    const selectedTags = params.selectedTags ? params.selectedTags.split(',') : []
-    const sort = params.sort || 1
-    return { sort, selectedTags };
-  }
-
-  setSelectedTags(selectedTags) {
-    const {sort} = this.parseUrlParams()
-    this.redirect(sort, selectedTags);
+    super(props, '/links/legal', ['sort','tags'], urlParsers, urlBuilders)
   }
 
   render() {
-    const resources = LinksWithTagMatch(/^legal/i);
+    const resources = LinksWithTagMatching(/^legal/i);
     const allLegalTags = GetUniqueTags(resources);
 
-    const params = this.props.match.params;
-    const selectedTags = params.selectedTags ? params.selectedTags.split(',') : []
-    const sort = params.sort || 1
-
+    const { tags, sort } = this.urlParams();
     
     return (
       <PageLayout>
@@ -57,28 +41,18 @@ class LegalLinksPage extends Component {
             <Form.Input>
               <Dropdown selection multiple placeholder='Filter tags...'
                 options={DropdownOptionsForTags(allLegalTags)}
-                value={selectedTags} onChange={(e, v) => this.setSelectedTags(v.value)}
+                value={tags} onChange={(e, v) => this.redirect({ tags:v.value })}
                 search={TagSearch}
               />
             </Form.Input>
-            {(selectedTags.length < 2) ? null :
-              <Button onClick={this.clearFilter}>Clear filter</Button>
+            {(tags.length < 2) ? null :
+              <Button onClick={() => this.redirect({ tags: [] })}>Clear filter</Button>
             }
           </Form>
         </Container>
       </PageLayout>
     )
   }
-}
-
-LegalLinksPage.contextTypes = {
-  router: PropTypes.shape({
-    history: PropTypes.shape({
-      push: PropTypes.func.isRequired,
-      replace: PropTypes.func.isRequired
-    }).isRequired,
-    staticContext: PropTypes.object
-  }).isRequired
 }
 
 export default withRouter(LegalLinksPage)

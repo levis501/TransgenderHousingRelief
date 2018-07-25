@@ -40,8 +40,8 @@ class App extends Component {
           <Route path='/faq' component={FaqPage} />
 
           {/* <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinksPage} /> */}
-          <Route path='/links/housing/:sort?/:selectedTags?' component={HousingLinksPage} />
-          <Route path='/links/legal/:sort?/:selectedTags?' component={LegalLinksPage} />
+          <Route path='/links/housing/:sort?/:location?' component={HousingLinksPage} />
+          <Route path='/links/legal/:sort?/:tags?' component={LegalLinksPage} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>
