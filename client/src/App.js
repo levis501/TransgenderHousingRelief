@@ -39,7 +39,6 @@ class App extends Component {
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
 
-          {/* <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinksPage} /> */}
           <Route path='/links/housing/:sort?/:location?' component={HousingLinksPage} />
           <Route path='/links/legal/:sort?/:tags?' component={LegalLinksPage} />
 
