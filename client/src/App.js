@@ -6,6 +6,7 @@ import SearchOfferedPage from './layout/search/SearchOfferedPage';
 import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import ResourceLinksPage from './layout/links/ResourceLinksPage';
+import SponsorsPage from './layout/links/SponsorsPage';
 import FaqPage from './layout/faq/FaqPage';
 import LoginPage from './layout/login/LoginPage';
 import MessagesPage from './layout/messages/MessagesPage';
@@ -37,6 +38,7 @@ class App extends Component {
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
+          <Route path='/sponsors' component={SponsorsPage} />
 
           <Route path='/links/:resourceType?/:sort?/:selectedTags?' component={ResourceLinksPage} />
 
