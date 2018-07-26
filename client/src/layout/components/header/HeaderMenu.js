@@ -21,6 +21,7 @@ const MenuLinksBottom = ({path}) => {
       <Menu.Item as={Link} to='/safety-tips' name='Safety Tips' active={path === '/safety-tips'} />
       <Menu.Item as={Link} to='/links/housing' name='Housing Resources' active={path === '/housing-resources'} />
       <Menu.Item as={Link} to='/links/legal' name='Legal Resources' active={path === '/legal'} />
+      <Menu.Item as={Link} to='/sponsors' name='Sponsors' active={path === '/sponsors'} />
     </React.Fragment>
   );
 }

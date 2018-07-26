@@ -5,6 +5,7 @@ import HomePage from './layout/homepage/HomePage';
 import SearchOfferedPage from './layout/search/SearchOfferedPage';
 import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
+import SponsorsPage from './layout/links/SponsorsPage';
 import HousingLinksPage from './layout/links/HousingLinksPage';
 import LegalLinksPage from './layout/links/LegalLinksPage';
 import FaqPage from './layout/faq/FaqPage';
@@ -39,6 +40,7 @@ class App extends Component {
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
+          <Route path='/sponsors' component={SponsorsPage} />
           <Route path='/safety-tips' component={SafetyTipsPage} />
 
           <Route path='/links/housing/:sort?/:location?' component={HousingLinksPage} />
