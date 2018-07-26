@@ -4,7 +4,7 @@ import AgreementPage from './AgreementPage';
 import DisclaimerText from '../text/DisclaimerText';
 
 const DisclaimerAgreementPage = () => (
-  <AgreementPage agreementTitle='Disclaimer'>
+  <AgreementPage agreementTitle='Disclaimer' link='/disclaimer'>
     <DisclaimerText/>
   </AgreementPage>
 );

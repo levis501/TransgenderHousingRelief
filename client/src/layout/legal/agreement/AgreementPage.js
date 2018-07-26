@@ -5,7 +5,8 @@ import {
   Checkbox,
   Form,
   Grid,
-  Header
+  Header,
+  Divider
 } from 'semantic-ui-react';
 
 import PageLayout from '../../components/PageLayout';
@@ -23,7 +24,7 @@ class AgreementPage extends React.Component {
     this.setState({agreeChecked: checked});
   }
   handleScroll = (e) => {
-    const bottom = e.target.scrollHeight - e.target.scrollTop === e.target.clientHeight;
+    const bottom = e.target.scrollHeight - e.target.scrollTop <= e.target.clientHeight;
     if (bottom) {
       this.setState({reachedBottom: true});
     }
@@ -68,6 +69,8 @@ class AgreementPage extends React.Component {
               </Grid.Row>
             </Grid>
           </Form>
+          <Divider />
+          {this.props.link && (<p>For future reference, the text of this document can be found <a href={this.props.link}>here</a>.</p>)}
         </Container>
       </PageLayout>
     );
