@@ -22,7 +22,7 @@ const MessageHeader = ({subject, sender, date})=>(
     </span>
   </React.Fragment>
 );
-const MessageMenu = () => (
+const MessagePrimaryMenu = () => (
   <React.Fragment>
     <Button primary
       as={Link} to='/messages/compose'>
@@ -30,6 +30,16 @@ const MessageMenu = () => (
     </Button>
     <Button negative>
       <Icon name='trash' /> Move to Trash
+    </Button>
+  </React.Fragment>
+);
+const MessageSecondaryMenu = () => (
+  <React.Fragment>
+    <Button>
+      <Icon name='exclamation circle' /> Report
+    </Button>
+    <Button>
+      <Icon name='user cancel' /> Block User
     </Button>
   </React.Fragment>
 );
@@ -52,12 +62,17 @@ const MessageViewer = ({message, onClose}) => {
             <MessageHeader subject={subject} sender={sender} date={date}/>
           </Grid.Column>
           <Grid.Column width={8} textAlign='right'>
-            <MessageMenu/>
+            <MessagePrimaryMenu/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={15} floated='right'>
             <MessageBody body={body}/>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8} floated='right' textAlign='right'>
+            <MessageSecondaryMenu/>
           </Grid.Column>
         </Grid.Row>
       </Responsive>
@@ -67,13 +82,18 @@ const MessageViewer = ({message, onClose}) => {
             <BackButton onClose={onClose}/>
           </Grid.Column>
           <Grid.Column width={14} textAlign='right'>
-            <MessageMenu/>
+            <MessagePrimaryMenu/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column width={16} floated='right'>
             <MessageHeader subject={subject} sender={sender} date={date}/>
             <MessageBody body={body}/>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={8} floated='right' textAlign='right'>
+            <MessageSecondaryMenu/>
           </Grid.Column>
         </Grid.Row>
       </Responsive>
