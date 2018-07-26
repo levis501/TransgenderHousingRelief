@@ -58,7 +58,7 @@ const MenuItemsPublic = ({username}) => (
     </Menu.Item>
     <Menu.Item as={Link} to={`/message/${username}`}>
       <span>
-        <Icon color='red' name='exclamation circle' /> Block User
+        <Icon color='red' name='user cancel' /> Block User
       </span>
     </Menu.Item>
     <Menu.Item as={Link} to={`/message/${username}`}>
