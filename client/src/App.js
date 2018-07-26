@@ -8,6 +8,7 @@ import SubmitAdPage from './layout/submitAd/SubmitAdPage';
 import HousingLinksPage from './layout/links/HousingLinksPage';
 import LegalLinksPage from './layout/links/LegalLinksPage';
 import FaqPage from './layout/faq/FaqPage';
+import SafetyTipsPage from './layout/faq/SafetyTipsPage';
 import LoginPage from './layout/login/LoginPage';
 import MessagesPage from './layout/messages/MessagesPage';
 import WriteMessagePage from './layout/messages/write/WriteMessagePage';
@@ -38,6 +39,7 @@ class App extends Component {
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
+          <Route path='/safety-tips' component={SafetyTipsPage} />
 
           <Route path='/links/housing/:sort?/:location?' component={HousingLinksPage} />
           <Route path='/links/legal/:sort?/:tags?' component={LegalLinksPage} />
