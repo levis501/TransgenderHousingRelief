@@ -4,6 +4,8 @@
 
 ## Plan
 
+[Project Specifications](https://docs.google.com/document/d/1mcoYB6NPtsWfCqK5UaNpq8BFmzSQ-YDygrlimMYmKxY/edit?usp=sharing)
+
 [Sketch of an object model for the site](https://docs.google.com/document/d/1Lzxzprs_Q-jAaLlXGSIyzdtvmffS9dtjITb1kU7h-M0/edit?usp=sharing)
 
 ### Tech Stack
