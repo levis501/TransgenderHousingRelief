@@ -8,8 +8,6 @@
 
 [Sketch of an object model for the site](https://docs.google.com/document/d/1Lzxzprs_Q-jAaLlXGSIyzdtvmffS9dtjITb1kU7h-M0/edit?usp=sharing)
 
-[Page Layout Designs](https://docs.google.com/document/d/1MelRd4xCZ8p825LSN8FhGLW2B1CiLUXY0zu9jhhfJrI/edit?usp=sharing)
-
 ### Tech Stack
 
 The frontend will use [React](https://reactjs.org/). The backend will use [Node](https://nodejs.org/), [Express](https://expressjs.com/), and [MongoDB](https://www.mongodb.com/). The additional libraries that will be used are elaborated in more detail in the [Project Specifications](https://docs.google.com/document/d/1zsxILMFHKN7sZAug3qIxRt-fNpGrYzKyp1UQJWHWNv4/edit?usp=sharing).
