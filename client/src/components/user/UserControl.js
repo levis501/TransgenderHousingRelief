@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import {
   Grid,
-  Image,
   Button,
-  Header,
   Responsive,
-  Label,
-  Icon
+  Icon,
+  Label
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import imgAvatar1 from '../../resources/img/avatars/avatar1.png';
+import UserInfo from './UserInfo';
 
 const LogInButton = ({style}) => (
   <Button as={Link} to='/login' primary fluid style={style}>
@@ -24,17 +22,11 @@ const SignUpButton = () => (
   </Button>
 );
 
-const UserInfo = () => (
+const UserInfoWithMenu = () => (
   <Grid>
     <Grid.Row>
       <Grid.Column width={8}>
-        <Link to='/profile'>
-          <Header as='h3'>
-            <Image src={imgAvatar1}
-              avatar />
-            User
-          </Header>
-        </Link>
+        <UserInfo/>
       </Grid.Column>
       <Grid.Column width={8} textAlign='right'>
         <Label as={Link} to='/messages'>
@@ -46,7 +38,7 @@ const UserInfo = () => (
       </Grid.Column>
     </Grid.Row>
   </Grid>
-)
+);
 
 const SessionMenu = () => (
   <React.Fragment>
@@ -69,7 +61,7 @@ class UserControl extends Component {
       <Grid stackable>
         <Grid.Row>
           <Grid.Column>
-            <UserInfo/>
+            <UserInfoWithMenu />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
