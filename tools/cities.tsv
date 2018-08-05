@@ -1,0 +1,788 @@
+	States	Cities		
+	Alabama	Auburn		
+		Birmingham		
+		Decatur		
+		Dothan		
+		Hoover		
+		Huntsville		
+		Mobile		
+		Montgomery		
+		Phenix City		
+		Tuscaloosa		
+				
+	Alaska	Anchorage		
+		Fairbanks		
+		Juneau		
+				
+	Arizona	Buckeye		
+		Flagstaff		
+		Glendale		
+		Lake Havasu City		
+		Mesa		
+		Phoenix		
+		Scottsdale		
+		Surprise		
+		Tucson		
+		Yuma		
+				
+	Arkansas	Conway		
+		El Dorado		
+		Fayetteville		
+		Fort Smith 		
+		Hot Springs		
+		Jonesboro		
+		Little Rock		
+		Pine Bluff		
+		Rogers		
+		Russellville		
+		Searcy		
+		West Memphis		
+				
+	California	Anaheim		
+		Bakersfield		
+		Berkeley		
+		Chico		
+		Chico		
+		Chula Vista		
+		Concord		
+		Davis		
+		Eureka		
+		Folsom		
+		Fontana		
+		Fremont		
+		Fresno		
+		Gilroy		
+		Glendale		
+		Hayward		
+		Huntington Beach		
+		Irvine		
+		Livermore		
+		Long Beach		
+		Los Angeles		
+		Merced		
+		Modesto		
+		Monterey		
+		Moreno Valley		
+		Oakland		
+		Oxnard		
+		Palo Alto		
+		Redding		
+		Richmond		
+		Riverside		
+		Sacramento		
+		Salinas		
+		San Bernardino		
+		San Diego		
+		San Fransisco		
+		San Jose		
+		San Luis Obispo		
+		San Mateo		
+		Santa Ana		
+		Santa Barbara		
+		Santa Cruz		
+		Santa Rosa		
+		Stockton		
+		Temecula 		
+		Vacaville		
+		Ventura		
+		Visalia		
+		Yreka		
+		Yuba City		
+				
+	Colorado	Boulder		
+		Colorado Springs		
+		Denver		
+		Fort Collins		
+		Grand Junction		
+		Greeley		
+		Loveland		
+		Puebo		
+				
+	Connecticut	Bridgeport		
+		Bristol		
+		Danbury		
+		Enfield		
+		Hartford		
+		Manchester		
+		Middletown		
+		Milford		
+		New Haven		
+		New London		
+		Norwalk		
+		Stamford		
+		Waterbury		
+				
+	Delaware	Wilmington		
+		Dover		
+				
+	Florida	Cape Coral		
+		Fort Pierce		
+		Gainesville		
+		Jacksonville		
+		Lakeland		
+		Miami		
+		Ocala		
+		Orlando		
+		Palm Coast		
+		Pensacola		
+		Tallahassee		
+		Tampa		
+		West Palm Beach		
+				
+	Georgia	Albany		
+		Alpharetta		
+		Athens		
+		Atlanta		
+		Augusta		
+		Brunswick		
+		Columbus		
+		Macon		
+		Marietta		
+		Rome		
+		Savannah		
+		Valdosta		
+				
+	Hawaii	Honolulu		
+		Kahului		
+		Kailua		
+		Kailua-Kona		
+		Kapaa		
+		Kapolei		
+		Kihei		
+		Koloa		
+		Lahaina		
+		Princeville		
+		Volcano		
+		Waikoloa Village		
+		Waimea		
+				
+	Idaho	Bosie		
+		Caldwell		
+		Coeur d'Alene		
+		Idaho Falls		
+		Lewiston		
+		Meridian		
+		Nampa		
+		Pocatello		
+		Post Falls		
+		Twin Falls		
+				
+	Illinois	Bloomington		
+		Champaign		
+		Chicago		
+		Davenport		
+		Decatur		
+		Dubuque		
+		Marion		
+		Naperville		
+		Peoria		
+		Quincy		
+		Rockford		
+		Springfield		
+				
+	Indiana	Anderson		
+		Bloomington		
+		Carmel		
+		Columbus		
+		East St. Louis		
+		Elkhart		
+		Evansville		
+		Fort Wayne		
+		Gary		
+		Indianapolis		
+		Kokomo		
+		Lafayette		
+		South Bend		
+		Terre Haute		
+				
+	Iowa	Ames		
+		Cedar Rapids		
+		Council Bluffs		
+		Davenport		
+		Des Moines		
+		Dubuque		
+		Fort Dodge		
+		Iowa City		
+		Marshaltown		
+		Mason City		
+		Sioux City		
+		Waterloo		
+		West Des Moines		
+				
+	Kansas	Dodge City		
+		Garden City		
+		Hays		
+		Kansas City		
+		Lawrence		
+		Olathe		
+		Overland Park		
+		Salina		
+		Shawnee		
+		Topeka		
+		Wichita		
+				
+	Kentucky	Bowling Green		
+		Covington		
+		Frankfort		
+		Georgetown		
+		Hopkinsville		
+		Lexington		
+		Louisville		
+		Nicholasville		
+		Owensboro		
+		Richmond		
+				
+	Louisiana	Alexandria		
+		Baton Rouge		
+		Kenner		
+		Lafayette		
+		Lake Charles		
+		Monroe		
+		New Orleans		
+		Shreveport		
+				
+	Maine	Auburn		
+		Augusta		
+		Bangor		
+		Biddeford		
+		Lewiston		
+		Portland		
+		Saco		
+		Sanford		
+		South Portland		
+		Westbrook		
+				
+	Maryland	Annapolis		
+		Baltimore		
+		Bowie		
+		College Park		
+		Frederick		
+		Gaithersburg		
+		Greenbelt		
+		Hagerstown		
+		Laurel		
+		Rockville		
+		Salisbury		
+				
+	Massachusetts	Amherst		
+		Attleboro		
+		Boston		
+		Brockton 		
+		Cambridge		
+		Fall River		
+		Haverhill		
+		Lawrence		
+		Lowell		
+		Lynn		
+		New Bedford		
+		Newton		
+		Pittsfield		
+		Quincy		
+		Springfield		
+		Taunton		
+		Waltham		
+		Worcester		
+				
+	Michigan	Ann Arbor		
+		Battle Creek		
+		Detroit		
+		Farmington Hills		
+		Flint		
+		Grand Rapids		
+		Kalamazoo		
+		Lansing		
+		Livonia		
+		Midland		
+		Muskegon		
+		Pontiac		
+		Portage		
+		Saginaw		
+		St. Clair Shores		
+		Taylor		
+		Troy		
+		Warren		
+		Westland		
+		Wyoming		
+				
+	Minnesota	Blaine		
+		Bloomington		
+		Brooklyn Park		
+		Burnsville		
+		Coon Rapids		
+		Duluth		
+		Eagan		
+		Eden Prairie		
+		Lakeville		
+		Mankato		
+		Maple Grove		
+		Minneapolis		
+		Minnetonka		
+		Moorhead		
+		Plymouth		
+		Rochester		
+		Shakopee		
+		St. Cloud		
+		St. Paul		
+		Woodbury		
+				
+	Mississippi	Biloxi		
+		Greenville		
+		Gulfport		
+		Hattiesburg		
+		Jackson		
+		Meridian		
+		Olive Branch		
+		Southaven		
+		Tupelo		
+				
+	Missouri	Blue Springs		
+		Cape Girardeau		
+		Chesterfield		
+		Columbia		
+		Florissant		
+		Independence		
+		Jefferson City		
+		Joplin		
+		Kansas City		
+		Lee's Summit		
+		O'Fallon		
+		Springfield		
+		St. Charles		
+		St. Joseph		
+		St. Louis		
+		St. Peters		
+		Wentzville		
+				
+	Montana	Billings		
+		Bozeman		
+		Butte		
+		Great Falls		
+		Helena		
+		Kalispell		
+		Missoula		
+				
+	Nebraska	Columbus		
+		Fremont		
+		Grand Island		
+		Hastings		
+		Kearney		
+		Lincoln		
+		Norfolk		
+		North Platte		
+		Omaha		
+		South Sioux City		
+				
+	Nevada	Carson City		
+		Elko		
+		Fernley		
+		Henderson		
+		Las Vegas		
+		Mesquite		
+		North Las Vegas		
+		Reno		
+		Sparks		
+				
+	New Hampshire	Claremont		
+		Concord		
+		Dover		
+		Keene		
+		Laconia		
+		Lebanon		
+		Manchester		
+		Nashua		
+		Portsmouth		
+		Rochester		
+				
+	New Jersey	Atlantic City		
+		Bayonne		
+		Brick		
+		Camden		
+		East Orange		
+		Edison		
+		Elizabeth		
+		Hoboken		
+		Jersey City		
+		Middletown		
+		New Brunswick		
+		Newark		
+		Paterson		
+		Perth Amboy		
+		Plainfield		
+		Toms River		
+		Trenton		
+		Union City		
+		Vineland		
+				
+	New Mexico	Alamogordo		
+		Albuquerque		
+		Carlsbad		
+		Clovis		
+		Farmington		
+		Hobbs		
+		Las Cruces		
+		Rio Rancho		
+		Roswell		
+		Santa Fe		
+				
+	New York	Albany		
+		Binghamton		
+		Buffalo		
+		Freeport		
+		Hempstead		
+		Ithaca		
+		Long Beach		
+		Mount Vernon		
+		New Rochelle		
+		New York		
+		Niagara Falls		
+		Rochester		
+		Rome		
+		Schenectady		
+		Spring Valley		
+		Syracuse		
+		Troy		
+		Utica		
+		Valley Stream		
+		White Plains		
+		Yonkers		
+				
+	North Carolina	Apex		
+		Asheville		
+		Burlington		
+		Cary		
+		Chapel Hill		
+		Charlotte		
+		Concord		
+		Durham		
+		Fayetteville		
+		Gastonia		
+		Greensboro		
+		Greenville		
+		Hickory		
+		High Point		
+		Huntersville		
+		Indian Trail		
+		Jacksonville		
+		Kannapolis		
+		Raleigh		
+		Rocky Mount		
+		Wake Forest		
+		Wilmington		
+		Wilson		
+		Winston-Salem		
+				
+	North Dakota	Bismarck		
+		Dickinson		
+		Fargo		
+		Grand Forks		
+		Mandan		
+		Minot		
+		West Fargo		
+		Williston		
+				
+	Ohio	Akron		
+		Canton		
+		Cincinnati		
+		Cleveland		
+		Columbus		
+		Cuyahoga Falls		
+		Dayton		
+		Elyria		
+		Hamilton		
+		Kettering		
+		Lakewood		
+		Lorain		
+		Middletown		
+		Newark		
+		Parma		
+		Springfield		
+		Toledo		
+		Youngstown		
+				
+	Oklahoma	Broken Arrow		
+		Edmond		
+		Enid		
+		Lawton 		
+		Midwest City		
+		Moore		
+		Norman		
+		Oklahoma City		
+		Stillwater		
+		Tulsa		
+				
+	Oregon	Albany		
+		Beaverton		
+		Bend		
+		Corvallis		
+		Eugene		
+		Gresham		
+		Hillsboro		
+		Medford		
+		Portland		
+		Salem		
+		Springfield		
+		Tigard		
+				
+	Pennsylvania	Allentown		
+		Altoona		
+		Bethlehem		
+		Erie		
+		Harrisburg		
+		Lancaster		
+		Philadelphia		
+		Pittsburgh		
+		Reading		
+		Scranton		
+		State College		
+		Wilkes-Barre		
+		York		
+				
+	Rhode Island	Providence		
+		Warwick		
+		Cranston		
+		Pawtucket		
+		East Providence		
+		Woonsocket		
+		Newport		
+		Central Falls		
+				
+	South Carolina	Aiken		
+		Anderson		
+		Charleston 		
+		Columbia		
+		Florence		
+		Goose Creek		
+		Greenville		
+		Greer		
+		Hanahan		
+		Hilton Head Island		
+		Mount Pleasant		
+		Myrtle Beach		
+		North Augusta		
+		North Charleston		
+		Rock Hill		
+		Spartanburg		
+		Summerville		
+		Sumter		
+				
+	South Dakota	Aberdeen		
+		Brookings		
+		Huron		
+		Mitchell		
+		Pierre		
+		Rapid City		
+		Sioux Falls		
+		Watertown		
+		Yankton		
+				
+	Tennessee	Bartlett		
+		Chattanooga		
+		Clarksville		
+		Collierville		
+		Franklin		
+		Hendersonville		
+		Jackson		
+		Johnson City		
+		Kingsport		
+		Knoxville		
+		Memphis		
+		Murfreesboro		
+		Nashville		
+		Smyrna		
+				
+	Texas	Abilene		
+		Allen		
+		Amarillo		
+		Arlington		
+		Austin		
+		Baytown		
+		Beaumont		
+		Bedford		
+		Brownsville		
+		Bryan		
+		Carrollton		
+		Cedar Park		
+		College Station		
+		Conroe		
+		Corpus Christi		
+		Dallas		
+		Denton		
+		DeSoto		
+		Edinburg		
+		El Paso		
+		Euless		
+		Flower Mound		
+		Fort Worth		
+		Frisco		
+		Galveston		
+		Garland		
+		Georgetown		
+		Grand Prairie		
+		Grapevine		
+		Harlingen		
+		Houston		
+		Irving		
+		Killeen		
+		Laredo		
+		League City		
+		Leander		
+		Lewisville		
+		Little Elm		
+		Longview		
+		Lubbock 		
+		Mansfield		
+		McAllen		
+		McKinney		
+		Mesquite		
+		Midland		
+		Mission		
+		Missouri City		
+		New Braunfels		
+		North Richland Hills		
+		Odessa		
+		Pasadena		
+		Pearland		
+		Pflugerville		
+		Pharr		
+		Plano		
+		Port Arthur		
+		Richardson		
+		Round Rock		
+		Rowlett		
+		San Angelo		
+		San Antonio		
+		San Marcos		
+		Sugar Land		
+		Temple		
+		Texas City		
+		Tyler		
+		Victoria		
+		Waco		
+		Wichita Falls		
+		Wylie		
+				
+	Utah	Layton		
+		Lehi		
+		Logan		
+		Murray		
+		Ogden		
+		Orem		
+		Provo		
+		Salt Lake City		
+		Sandy		
+		South Jordan		
+		St. George		
+		Taylorsville		
+		West Jordan		
+		West Valley City		
+				
+	Vermont	Barre		
+		Burlington		
+		Essex Junction		
+		Montpelier		
+		Rutland		
+		South Burlington		
+		Winooski		
+				
+	Virginia	Alexandria		
+		Chesapeake		
+		Hamn		
+		Harrisonburg		
+		Leesburg		
+		Lynchburg		
+		Newport News		
+		Norfolk		
+		Portsmouth		
+		Richmond		
+		Roanoke		
+		Suffolk		
+		Virginia Beach		
+				
+	 District of Columbia	Washington		
+				
+	Washington	Auburn		
+		Bellevue		
+		Bellingham		
+		Burien		
+		Everett		Terratoriez
+		Federal Way		
+		Kennewick		
+		Kent		
+		Kirkland		
+		Lacey		
+		Lakewood		
+		Marysville		
+		Olympia		
+		Pasco		
+		Redmond		
+		Renton		
+		Richland		
+		Sammamish		
+		Seattle		
+		Shoreline		
+		Spokane		
+		Spokane Valley		
+		Tacoma		
+		Vancouver		
+		Yakima		
+				
+	West Virginia	Beckley		
+		Charleston		
+		Clarksburg		
+		Fairmont		
+		Huntington		
+		Martinsburg		
+		Morgantown		
+		Parkersburg		
+		Weirton		
+		Wheeling		
+				
+	Wisconsin	Appleton		
+		Eau Claire		
+		Green Bay		
+		Janesville		
+		Kenosha		
+		La Crosse		
+		Madison		
+		Milwaukee		
+		Oshkosh		
+		Racine		
+		Sheboygan		
+		Waukesha		
+		Wauwatosa		
+		West Allis		
+				
+	Wyoming	Casper		
+		Cheyenne		
+		Cody		
+		Evanston		
+		Gillette		
+		Green River		
+		Jackson		
+		Laramie		
+		Riverton		
+		Rock Springs		
+		Sheridan		
+				
+	Puerto Rico	Bayamon		
+		Caguas		
+		Carolina		
+		Guaynabo		
+		Mayaguez		
+		Ponce		
+		San Juan		
+		Trujillo Alto		
+				
+	U.S. Virgin Islands	Charlotte Amalie		
+		Saint Croix		
+				
+	Northern Mariana Islands	Garapan		
+				
+	Guam	Dededo		
+		Mangilao		
+		Tamuning		
+		Tamuning		
+		Yigo 		
+				
+	American Samoa	Pago Pago		
+		Tafuna		

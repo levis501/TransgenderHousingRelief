@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Form, Dropdown } from 'semantic-ui-react';
 
-import { states, cities } from '../../../data/locations';
+import { states } from '../../../data/locations';
+import cities from '../../../data/cities.json'
 import { distanceOptions } from '../../../data/distance';
 
 const stateOptions = Object.keys(states).map(key => {
