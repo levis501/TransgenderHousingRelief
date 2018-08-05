@@ -36,7 +36,7 @@ const PageFooter = () => (
               <List.Item as={Link} to='/tos'>Terms of Service</List.Item>
               <List.Item as={Link} to='/disclaimer'>Disclaimer</List.Item>
               <List.Item as={Link} to='/privacy'>Privacy Policy</List.Item>
-              <List.Item as='a'>Corporate Sponsors</List.Item>
+              <List.Item as='a'>Sponsors</List.Item>
             </List>
           </Grid.Column>
         </Grid.Row>
