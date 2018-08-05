@@ -4,7 +4,7 @@ import AgreementPage from './AgreementPage';
 import PrivacyPolicyText from '../text/PrivacyPolicyText';
 
 const PrivacyPolicyAgreementPage = () => (
-  <AgreementPage agreementTitle='Privacy Policy'>
+  <AgreementPage agreementTitle='Privacy Policy' link='/privacy'>
     <PrivacyPolicyText/>
   </AgreementPage>
 );

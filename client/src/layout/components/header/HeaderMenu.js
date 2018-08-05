@@ -5,42 +5,43 @@ import {
 } from 'semantic-ui-react';
 import { withRouter, Link } from 'react-router-dom';
 
-const MenuLinksTop = ({path}) => {
+const MenuLinksTop = ({url}) => {
   return (
     <React.Fragment>
-      <Menu.Item as={Link} to='/' name='Home' active={path === '/'} />
-      <Menu.Item as={Link} to='/search-offered' name='Search Offered' active={path === '/search-offered'} />
-      <Menu.Item as={Link} to='/search-wanted' name='Search Wanted' active={path === '/offer-housing'} />
-      <Menu.Item as={Link} to='/submit' name='Submit Ad' active={path === '/submit'} />
+      <Menu.Item as={Link} to='/' name='Home' active={url === '/'} />
+      <Menu.Item as={Link} to='/search-offered' name='Search Offered' active={url === '/search-offered'} />
+      <Menu.Item as={Link} to='/search-wanted' name='Search Wanted' active={url === '/search-wanted'} />
+      <Menu.Item as={Link} to='/submit' name='Submit Ad' active={url === '/submit'} />
     </React.Fragment>
   );
 }
-const MenuLinksBottom = ({path}) => {
+const MenuLinksBottom = ({url}) => {
   return (
     <React.Fragment>
-      <Menu.Item as={Link} to='/safety-tips' name='Safety Tips' active={path === '/safety-tips'} />
-      <Menu.Item as={Link} to='/housing-resources' name='Housing Resources' active={path === '/housing-resources'} />
-      <Menu.Item as={Link} to='/legal' name='Legal Resources' active={path === '/legal'} />
+      <Menu.Item as={Link} to='/safety-tips' name='Safety Tips' active={url === '/safety-tips'} />
+      <Menu.Item as={Link} to='/links/housing' name='Housing Resources' active={url === '/links/housing'} />
+      <Menu.Item as={Link} to='/links/legal' name='Legal Resources' active={url === '/links/legal'} />
+      <Menu.Item as={Link} to='/sponsors' name='Sponsors' active={url === '/sponsors'} />
     </React.Fragment>
   );
 }
 
 const HeaderMenu = (props) => {
-  const {path} = props.match;
+  const {url} = props.match;
   return (
     <div style={{marginTop: '1em'}}>
       <Responsive maxWidth={990}>
         <Menu>
-          <MenuLinksTop path={path} />
+          <MenuLinksTop url={url} />
         </Menu>
         <Menu>
-          <MenuLinksBottom path={path} />
+          <MenuLinksBottom url={url} />
         </Menu>
       </Responsive>
       <Responsive minWidth={991}>
         <Menu pointing>
-          <MenuLinksTop path={path} />
-          <MenuLinksBottom path={path} />
+          <MenuLinksTop url={url} />
+          <MenuLinksBottom url={url} />
         </Menu>
       </Responsive>
     </div>

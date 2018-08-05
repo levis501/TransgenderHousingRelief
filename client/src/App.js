@@ -5,14 +5,18 @@ import HomePage from './layout/homepage/HomePage';
 import SearchOfferedPage from './layout/search/SearchOfferedPage';
 import SearchWantedPage from './layout/search/SearchWantedPage';
 import SubmitAdPage from './layout/submitAd/SubmitAdPage';
-import ResourceLinksPage from './layout/resource-links/ResourceLinksPage';
+import SponsorsPage from './layout/links/SponsorsPage';
+import HousingLinksPage from './layout/links/HousingLinksPage';
+import LegalLinksPage from './layout/links/LegalLinksPage';
 import FaqPage from './layout/faq/FaqPage';
+import SafetyTipsPage from './layout/faq/SafetyTipsPage';
 import LoginPage from './layout/login/LoginPage';
 import MessagesPage from './layout/messages/MessagesPage';
 import WriteMessagePage from './layout/messages/write/WriteMessagePage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
 import RegistrationPage from './layout/register/RegistrationPage';
+import AgeVerificationPage from './layout/register/AgeVerificationPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
 import ContactPage from './layout/contact/ContactPage';
 import TermsOfServicePage from './layout/legal/informational/TermsOfServicePage';
@@ -35,9 +39,12 @@ class App extends Component {
           <Route path='/search-wanted' component={SearchWantedPage}/>
           <Route path='/listing' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
-          <Route path='/faq' component={FaqPage}/>
-          <Route path='/legal' render={() => (<ResourceLinksPage select={/legal-help/} title='Legal Resources' />)} />
-          <Route path='/housing-resources' render={() => (<ResourceLinksPage select={/housing/} skip={/^legal-.+/} title='Housing Resources' />)} />
+          <Route path='/faq' component={FaqPage} />
+          <Route path='/sponsors' component={SponsorsPage} />
+          <Route path='/safety-tips' component={SafetyTipsPage} />
+
+          <Route path='/links/housing/:sort?/:location?' component={HousingLinksPage} />
+          <Route path='/links/legal/:sort?/:tags?' component={LegalLinksPage} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
           <Route path='/profile' component={ProfilePage}/>
@@ -48,13 +55,13 @@ class App extends Component {
           <Route path='/messages/write' component={WriteMessagePage}/>
           <Route path='/messages' component={MessagesPage}/>
 
-          <Route path='/login/forgot-username' component={ForgotUsernamePage}/>
+          <Route path='/login/forgot-username' component={ForgotUsernamePage} />
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
           <Route path='/login' component={LoginPage}/>
-
           <Route path='/signup/tos' component={TermsOfServiceAgreementPage}/>
           <Route path='/signup/disclaimer' component={DisclaimerAgreementPage}/>
           <Route path='/signup/privacypolicy' component={PrivacyPolicyAgreementPage}/>
+          <Route path='/signup/age' component={AgeVerificationPage}/>
           <Route path='/signup' component={RegistrationPage}/>
 
           <Route path='/feedback' component={FeedbackPage}/>
