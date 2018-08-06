@@ -4,11 +4,12 @@ import {
   Icon,
   Label
 } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const SearchResult = ({title, city, state, startDate, description, price, tags}) => (
   <Item>
     <Item.Content>
-      <Item.Header as='a'>
+      <Item.Header as={Link} to='/listing/POSTID'>
         {title}
       </Item.Header>
       <Item.Meta>
