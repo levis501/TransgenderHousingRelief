@@ -37,7 +37,7 @@ class App extends Component {
           <Route exact path='/' component={HomePage}/>
           <Route path='/search-offered' component={SearchOfferedPage}/>
           <Route path='/search-wanted' component={SearchWantedPage}/>
-          <Route path='/listing' component={ListingPage}/>
+          <Route path='/listing/:id' component={ListingPage}/>
           <Route path='/submit' component={SubmitAdPage}/>
           <Route path='/faq' component={FaqPage} />
           <Route path='/sponsors' component={SponsorsPage} />
