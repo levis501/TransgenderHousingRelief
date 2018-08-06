@@ -28,6 +28,7 @@ import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreemen
 import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
 import ListingPage from './layout/listing/ListingPage';
+import NotificationsPage from './layout/notifications/NotificationsPage';
 
 class App extends Component {
   render() {
@@ -54,6 +55,7 @@ class App extends Component {
           <Route path='/messages/trash' component={MessagesPage}/>
           <Route path='/messages/write' component={WriteMessagePage}/>
           <Route path='/messages' component={MessagesPage}/>
+          <Route path='/notifications' component={NotificationsPage}/>
 
           <Route path='/login/forgot-username' component={ForgotUsernamePage} />
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
