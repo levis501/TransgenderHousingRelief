@@ -10,8 +10,7 @@ import {
 import UserInfo from '../../components/user/UserInfo';
 
 import PageLayout from '../components/PageLayout';
-import ListingPrimaryMenu from './ListingPrimaryMenu';
-import ListingSecondaryMenu from './ListingSecondaryMenu';
+import ListingMenu from './ListingMenu';
 
 const bodyStyle = {
   marginTop: '1em',
@@ -40,9 +39,9 @@ const ListingHeader = ({title, city, state, tags}) => (
           }
         </div>
       </Grid.Column>
-      <Grid.Column computer={6} tablet={6} mobile={8}>
+      <Grid.Column width={8}>
+        <Header as='h4' style={{marginTop: '0.25em'}}>Posted by</Header>
         <UserInfo />
-        <ListingPrimaryMenu style={{marginTop: '0.5em'}} />
       </Grid.Column>
     </Grid.Row>
   </Grid>
@@ -62,7 +61,7 @@ const ListingPage = () => {
           Fames ac turpis egestas sed. Nec nam aliquam sem et tortor consequat. Id porta nibh venenatis cras sed. Accumsan sit amet nulla facilisi morbi tempus iaculis urna. Tristique senectus et netus et malesuada fames ac turpis. Augue lacus viverra vitae congue eu consequat ac. Habitant morbi tristique senectus et. Nisl vel pretium lectus quam id leo in. Congue eu consequat ac felis donec. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Egestas sed tempus urna et pharetra pharetra massa massa ultricies. Lectus sit amet est placerat in egestas erat imperdiet. Ut tortor pretium viverra suspendisse potenti nullam ac. Elit ullamcorper dignissim cras tincidunt lobortis. Vulputate sapien nec sagittis aliquam. Lectus magna fringilla urna porttitor rhoncus dolor purus non. Imperdiet nulla malesuada pellentesque elit eget gravida cum sociis.
         </p>
 
-        <ListingSecondaryMenu />
+        <ListingMenu />
       </Container>
     </PageLayout>
   )

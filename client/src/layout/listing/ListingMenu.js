@@ -5,10 +5,18 @@ import {
   Grid
 } from 'semantic-ui-react';
 
-const ListingSecondaryMenu = () => (
+const ListingMenu = () => (
   <Grid>
     <Grid.Row>
-      <Grid.Column width={16} textAlign='right'>
+      <Grid.Column width={8}>
+        <Button color='blue'>
+          <Icon name='mail' /> Message
+        </Button>
+        <Button color='pink'>
+          <Icon name='bookmark' /> Save
+        </Button>
+      </Grid.Column>
+      <Grid.Column width={8} textAlign='right'>
         <Button negative>
           <Icon name='x' /> Delete Post
         </Button>
@@ -20,4 +28,4 @@ const ListingSecondaryMenu = () => (
   </Grid>
 )
 
-export default ListingSecondaryMenu;
+export default ListingMenu;
