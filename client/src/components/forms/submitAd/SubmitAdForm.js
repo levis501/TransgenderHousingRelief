@@ -4,6 +4,7 @@ import {
   TextArea,
   Button,
   Input,
+  Image,
   Grid
 } from 'semantic-ui-react';
 
@@ -11,6 +12,7 @@ import LocationSelect from '../search/LocationSelect';
 import TagSelect from '../search/TagSelect';
 import PriceRangeSelect from '../search/PriceRangeSelect';
 import DateSelect from './DateSelect';
+import ImageUpload from './ImageUpload';
 import AdTypeSelect from './AdTypeSelect';
 
 class SubmitAdForm extends React.Component {
@@ -27,6 +29,7 @@ class SubmitAdForm extends React.Component {
   isOfferedAd() {
     return this.state.adType === 'offered';
   }
+
   render() {
     return (
       <Form>
@@ -42,6 +45,9 @@ class SubmitAdForm extends React.Component {
         <Grid stackable>
           <Grid.Row>
             <Grid.Column width={8}>
+              <Form.Field>
+                <ImageUpload hidden={!this.isOfferedAd()} />
+              </Form.Field>
               <Form.Field>
                 <LocationSelect
                   disableAnywhere={this.isOfferedAd()}
