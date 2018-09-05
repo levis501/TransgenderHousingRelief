@@ -15,6 +15,7 @@ import MessagesPage from './layout/messages/MessagesPage';
 import WriteMessagePage from './layout/messages/write/WriteMessagePage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
+import EmailVerificationPage from './layout/login/EmailVerificationPage';
 import RegistrationPage from './layout/register/RegistrationPage';
 import AgeVerificationPage from './layout/register/AgeVerificationPage';
 import FeedbackPage from './layout/feedback/FeedbackPage';
@@ -29,7 +30,6 @@ import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
 import ListingPage from './layout/listing/ListingPage';
 import NotificationsPage from './layout/notifications/NotificationsPage';
-import EmailVerificationPage from './layout/login/EmailVerificationPage';
 
 class App extends Component {
   render() {
