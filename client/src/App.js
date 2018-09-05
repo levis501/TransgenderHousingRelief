@@ -29,6 +29,7 @@ import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
 import ListingPage from './layout/listing/ListingPage';
 import NotificationsPage from './layout/notifications/NotificationsPage';
+import EmailVerificationPage from './layout/login/EmailVerificationPage';
 
 class App extends Component {
   render() {
@@ -59,6 +60,7 @@ class App extends Component {
 
           <Route path='/login/forgot-username' component={ForgotUsernamePage} />
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
+          <Route path='/login/verification' component={EmailVerificationPage}/>
           <Route path='/login' component={LoginPage}/>
           <Route path='/signup/tos' component={TermsOfServiceAgreementPage}/>
           <Route path='/signup/disclaimer' component={DisclaimerAgreementPage}/>
