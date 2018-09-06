@@ -7,7 +7,19 @@ import {
 
 import imgAvatar1 from '../../resources/img/avatars/avatar1.png';
 
-const UserInfo = () => (
+function MemberSince() {
+  return <p>Member since: {'1/1/2018'}</p>;
+}
+
+function SensitiveDatestamp(props) {
+  if (props.isLoggedInUser === 'true') {
+    return <MemberSince />;
+  }
+
+  return null;
+};
+
+const UserInfo = (props) => (
   <Grid style={{marginBottom: '1em'}}>
     <Grid.Row>
       <Grid.Column width={5}>
@@ -15,7 +27,7 @@ const UserInfo = () => (
       </Grid.Column>
       <Grid.Column width={11}>
         <Header as='h1'>Username</Header>
-        <p>Member since: {'1/1/2018'}</p>
+        { SensitiveDatestamp(props) }
       </Grid.Column>
     </Grid.Row>
   </Grid>

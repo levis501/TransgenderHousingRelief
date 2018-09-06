@@ -10,17 +10,17 @@ import ProfileSubpages from './ProfileSubpages';
 import UserInfo from './UserInfo';
 import UserActionMenu from './UserActionMenu';
 
-const ProfilePage = () => (
+const PublicProfilePage = () => (
   <PageLayout>
     <Container>
       <Grid stackable>
         <Grid.Row>
           <Grid.Column mobile={6} tablet={6} computer={4} largeScreen={4}>
-            <UserInfo  isLoggedInUser='true'/>
-            <UserActionMenu isLoggedInUser='true'/>
+            <UserInfo/>
+            <UserActionMenu/>
           </Grid.Column>
           <Grid.Column mobile={10} tablet={10} computer={12} largeScreen={12}>
-            <ProfileSubpages isLoggedInUser='true'/>
+            <ProfileSubpages/>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -28,4 +28,4 @@ const ProfilePage = () => (
   </PageLayout>
 );
 
-export default ProfilePage;
+export default PublicProfilePage;

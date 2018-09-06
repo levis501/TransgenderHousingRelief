@@ -9,7 +9,7 @@ import AccountSettings from './account-settings/AccountSettings';
 import UserPostsList from './UserPostsList';
 
 const ProfileSubpages = (props) => {
-  const isLoggedInUser = true;
+  const isLoggedInUser = props.isLoggedInUser === 'true';
 
   if (isLoggedInUser) {
     return (
