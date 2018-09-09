@@ -29,6 +29,7 @@ import PrivacyPolicyAgreementPage from './layout/legal/agreement/PrivacyPolicyAg
 import DisclaimerAgreementPage from './layout/legal/agreement/DisclaimerAgreementPage';
 import NotFoundPage from './layout/NotFoundPage';
 import ProfilePage from './layout/profile/ProfilePage';
+import PublicProfilePage from './layout/profile/PublicProfilePage';
 import ListingPage from './layout/listing/ListingPage';
 import NotificationsPage from './layout/notifications/NotificationsPage';
 
@@ -50,7 +51,8 @@ class App extends Component {
           <Route path='/links/legal/:sort?/:tags?' component={LegalLinksPage} />
 
           <Route path='/profile/settings/:submenu?' component={ProfilePage}/>
-          <Route path='/profile' component={ProfilePage}/>
+          <Route exact path='/profile' component={ProfilePage}/>
+          <Route path='/profile/:id/' component={PublicProfilePage}/>
           <Route path='/message/inbox' component={MessagesPage}/>
           <Route path='/messages/sent' component={MessagesPage}/>
           <Route path='/messages/drafts' component={MessagesPage}/>

@@ -7,8 +7,9 @@ import {
   Icon
 } from 'semantic-ui-react';
 
-const UserActionMenu = () => {
-  const isLoggedInUser = true;
+const UserActionMenu = (props) => {
+  const isLoggedInUser =  props.isLoggedInUser === 'true';
+
   return (
     <Menu vertical>
       {
