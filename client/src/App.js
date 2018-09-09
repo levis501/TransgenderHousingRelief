@@ -15,6 +15,7 @@ import MessagesPage from './layout/messages/MessagesPage';
 import WriteMessagePage from './layout/messages/write/WriteMessagePage';
 import ForgotUsernamePage from './layout/login/ForgotUsernamePage';
 import ForgotPasswordPage from './layout/login/ForgotPasswordPage';
+import EmailVerificationCheckPage from './layout/login/EmailVerificationCheckPage';
 import EmailVerificationPage from './layout/login/EmailVerificationPage';
 import RegistrationPage from './layout/register/RegistrationPage';
 import AgeVerificationPage from './layout/register/AgeVerificationPage';
@@ -60,6 +61,7 @@ class App extends Component {
 
           <Route path='/login/forgot-username' component={ForgotUsernamePage} />
           <Route path='/login/forgot-password' component={ForgotPasswordPage}/>
+          <Route path='/login/verification-check' component={EmailVerificationCheckPage}/>
           <Route path='/login/verification' component={EmailVerificationPage}/>
           <Route path='/login' component={LoginPage}/>
           <Route path='/signup/tos' component={TermsOfServiceAgreementPage}/>
