@@ -4,17 +4,21 @@
   "private": true,
   "dependencies": {
     "escape-string-regexp": "^1.0.5",
+    "lodash": "^4.17.11",
+    "merge": "^1.2.1",
     "moment": "^2.22.2",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react-dev-utils": "^7.0.3",
+    "react-dom": "^16.8.3",
     "react-router-dom": "^4.2.2",
     "react-router-hash-link": "^1.2.0",
     "react-router-prop-types": "^1.0.4",
     "react-scripts": "1.1.4",
     "semantic-ui-calendar-react": "^0.4.6",
     "semantic-ui-css": "^2.3.1",
-    "semantic-ui-react": "^0.80.2"
+    "semantic-ui-react": "^0.80.2",
+    "webpack-dev-server": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
